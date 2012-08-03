@@ -1,0 +1,58 @@
+INSTALL - FLIP
+               
+
+ATMEL
+
+
+Requirements
+------------
+
+This program runs on Windows 98/Me/NT/2000/XP and Linux platforms.
+
+
+Windows Installation
+--------------------
+
+- Copy the Flip_<version>.zip file to an empty temporary directory.
+- Uncompress the zip file so that you get a Flip_<version> directory.
+- Open the Flip_<version> directory and run the Setup file.
+- Follow the installation program instructions.
+
+Linux Installation
+------------------
+
+- Uncompress the archive file:
+  tar xvzf flip_<version>_linux.tgz
+
+Flip partly relies on Tcl/Tk libraries; your Linux release may contain
+outdated versions of these libraries. In this package, we provide
+the Tcl/Tk libraries on which Flip has been built.
+
+In order to load the Tcl/Tk libraries provided by Atmel (libtcl8.3.so and 
+libtk8.3.so) you should edit (as root) the "/etc/ld.so.conf" file and add 
+the full path of these libraries. Execute the "ldconfig" command afterwards.
+
+Post Installation Instructions
+------------------------------
+
+CAN
+
+After FLIP installation completion, CAN users must install their
+CAN dongle software and reboot their PC platform.
+
+The VECTOR CANpari dongle requires the user's PATH variable 
+to be updated so that it contains the path to the vccand32.dll file.
+
+Before using the PEAK PCAN dongle, you must launch the PEAK dll
+installation program named pcandrv.exe and located in the 
+<your_HDD>:\Program Files\ATMEL\FLIP x.y.z
+
+
+USB
+
+After FLIP installation completion, USB users must execute
+Start > Programs > Atmel > FLIP > Install USB Drivers
+
+FLIP-USB can be used on Windows 98/Me/2000/XP platforms only.
+
+

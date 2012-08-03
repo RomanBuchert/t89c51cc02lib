@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>t89c51cc02lib: timer0.h Quellcode</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Erzeugt von Doxygen 1.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&nbsp;der&nbsp;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+<div class="header">
+  <div class="headertitle">
+<h1>timer0.h</h1>  </div>
+</div>
+<div class="contents">
+<a href="timer0_8h.html">gehe zur Dokumentation dieser Datei</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 <span class="comment">/**************************************************************************/</span>
+<a name="l00006"></a>00006 <span class="preprocessor">#ifndef __TIMER0_H__</span>
+<a name="l00007"></a>00007 <span class="preprocessor"></span><span class="preprocessor">#define __TIMER0_H__</span>
+<a name="l00008"></a>00008 <span class="preprocessor"></span><span class="comment">/******************************************************************************/</span>
+<a name="l00009"></a>00009 
+<a name="l00010"></a>00010 <span class="comment">/******************************************************************************</span>
+<a name="l00011"></a>00011 <span class="comment"> * INCLUDE-Dateien</span>
+<a name="l00012"></a>00012 <span class="comment"> ******************************************************************************/</span>
+<a name="l00013"></a>00013 <span class="preprocessor">#include &lt;<a class="code" href="t89c51cc02_8h.html">t89c51cc02.h</a>&gt;</span>
+<a name="l00014"></a>00014 <span class="preprocessor">#include &lt;<a class="code" href="mytypes_8h.html" title="Deklaration mit eigenen Dateitypen.">mytypes.h</a>&gt;</span>
+<a name="l00015"></a>00015 <span class="preprocessor">#include &lt;<a class="code" href="sys_cfg_8h.html">sysCfg.h</a>&gt;</span>
+<a name="l00016"></a>00016 <span class="preprocessor">#include &lt;<a class="code" href="isrvectors_8h.html" title="Diese Datei beinhaltet die Interruptvectoren des (A)T89C51CC02.">isrvectors.h</a>&gt;</span>
+<a name="l00017"></a>00017 <span class="comment">/******************************************************************************/</span>
+<a name="l00018"></a>00018 
+<a name="l00019"></a>00019 <span class="comment">/******************************************************************************</span>
+<a name="l00020"></a>00020 <span class="comment"> * ENUMS</span>
+<a name="l00021"></a>00021 <span class="comment"> ******************************************************************************/</span>
+<a name="l00022"></a>00022 <span class="preprocessor">#ifndef __TMR_ENUMS__</span>
+<a name="l00023"></a><a class="code" href="timer0_8h.html#a7f97728d8b38a08f9804c06d2b30c006">00023</a> <span class="preprocessor"></span><span class="preprocessor">#define __TMR_ENUMS__</span>
+<a name="l00024"></a>00024 <span class="preprocessor"></span>
+<a name="l00025"></a>00025 
+<a name="l00026"></a><a class="code" href="timer0_8h.html#a90730c3564c40c3de278e2b92d48dd51">00026</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="timer0_8h.html#a90730c3564c40c3de278e2b92d48dd51" title="Enum mit den verschiedenen Timerfunktionen.">ETmrMode</a> {
+<a name="l00027"></a><a class="code" href="timer0_8h.html#a90730c3564c40c3de278e2b92d48dd51aef79a7a52b36965e30b33f697a0babed">00027</a>         <a class="code" href="timer0_8h.html#a90730c3564c40c3de278e2b92d48dd51aef79a7a52b36965e30b33f697a0babed" title="Timer als 13-Bit-Timer. Kein Autoreload.">Tmr13Bit</a> = 0,       
+<a name="l00028"></a><a class="code" href="timer0_8h.html#a90730c3564c40c3de278e2b92d48dd51a5606f2bbf50ee0917600624c57475f9d">00028</a>     Tmr16Bit,           
+<a name="l00029"></a><a class="code" href="timer0_8h.html#a90730c3564c40c3de278e2b92d48dd51a531d097996af5bba5cb5bb877050ad5a">00029</a>     Tmr8BitAutoReload,  
+<a name="l00030"></a><a class="code" href="timer0_8h.html#a90730c3564c40c3de278e2b92d48dd51a2542b09fbd4dbfc639c3d591ed28c976">00030</a>     <a class="code" href="timer0_8h.html#a90730c3564c40c3de278e2b92d48dd51a2542b09fbd4dbfc639c3d591ed28c976">TmrDuo8Bit</a>          
+<a name="l00031"></a>00031 
+<a name="l00032"></a>00032 } TTmrMode;
+<a name="l00033"></a>00033 
+<a name="l00036"></a><a class="code" href="timer0_8h.html#a24e8214393a05af5a5ffc2f204282e95">00036</a> <span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="timer0_8h.html#a24e8214393a05af5a5ffc2f204282e95" title="Funktionsweise des Timers.">ETmrTyp</a> {
+<a name="l00037"></a><a class="code" href="timer0_8h.html#a24e8214393a05af5a5ffc2f204282e95a8cbd3ea3fb23d1b3d8b3afcb132e41a4">00037</a>         <a class="code" href="timer0_8h.html#a24e8214393a05af5a5ffc2f204282e95a8cbd3ea3fb23d1b3d8b3afcb132e41a4" title="Timer arbeitet als Timer.">TmrTimer</a> = 0,       
+<a name="l00038"></a><a class="code" href="timer0_8h.html#a24e8214393a05af5a5ffc2f204282e95a83cea3579b3d3d20c6d2128f201b6950">00038</a>     <a class="code" href="timer0_8h.html#a24e8214393a05af5a5ffc2f204282e95a83cea3579b3d3d20c6d2128f201b6950" title="Timer arbeitet als Zähler.">TmrCounter</a>          
+<a name="l00039"></a>00039 } TTmrTyp;
+<a name="l00040"></a>00040 <span class="preprocessor">#endif //__TMR_ENUMS__</span>
+<a name="l00041"></a>00041 <span class="preprocessor"></span><span class="comment">/******************************************************************************/</span>
+<a name="l00042"></a>00042 
+<a name="l00043"></a>00043 <span class="comment">/**************************************************************************/</span>
+<a name="l00048"></a>00048 <span class="keywordtype">void</span> <a class="code" href="timer0_8h.html#a0ed980895cba2d6557c15ccfe4e63cca" title="Initialisiert den Timer0.">Tmr0Init</a>(<a class="code" href="timer0_8h.html#acb2b60079cdf290783db7f0707368b66">TTmrMode</a> Mode, <a class="code" href="timer0_8h.html#a7c7f5a98c4fc693482fea470aa99d310">TTmrTyp</a> Typ);
+<a name="l00049"></a>00049 <span class="comment">/******************************************************************************/</span>
+<a name="l00050"></a>00050 
+<a name="l00051"></a>00051 <span class="comment">/**************************************************************************/</span>
+<a name="l00061"></a>00061 <span class="keywordtype">void</span> <a class="code" href="timer0_8h.html#aec0502e8990203658ddfa826ad4f6567" title="Setzt den Zeitwert des Timers in ms.">Tmr0SetTime</a>(<a class="code" href="mytypes_8h.html#ac915988d8c60a3b943f936c25f9eca6e" title="Vorzeichenloser 16-Bit-Wert.">__u16</a> u16Zeit) __critical;
+<a name="l00062"></a>00062 <span class="comment">/******************************************************************************/</span>
+<a name="l00063"></a>00063 
+<a name="l00064"></a>00064 <span class="comment">/**************************************************************************/</span>
+<a name="l00068"></a>00068 <span class="keywordtype">void</span> <a class="code" href="timer0_8h.html#a804e041fd7c0cfd452f7619535e0d1a0" title="Setzt den Wert des Timerregisters.">Tmr0SetValue</a>(<a class="code" href="mytypes_8h.html#ac915988d8c60a3b943f936c25f9eca6e" title="Vorzeichenloser 16-Bit-Wert.">__u16</a> u16Value) __critical;
+<a name="l00069"></a>00069 <span class="comment">/******************************************************************************/</span>
+<a name="l00070"></a>00070 
+<a name="l00071"></a>00071 <span class="comment">/**************************************************************************/</span>
+<a name="l00075"></a>00075 <a class="code" href="mytypes_8h.html#ac915988d8c60a3b943f936c25f9eca6e" title="Vorzeichenloser 16-Bit-Wert.">__u16</a> <a class="code" href="timer0_8h.html#a85da30a44b3d7f481b77b4bf0316cf68" title="Gibt den aktuellen Wert des Timerregisters zurück.">Tmr0GetValue</a>(<span class="keywordtype">void</span>) __critical;
+<a name="l00076"></a>00076 <span class="comment">/******************************************************************************/</span>
+<a name="l00077"></a>00077 
+<a name="l00078"></a>00078 <span class="comment">/**************************************************************************/</span>
+<a name="l00085"></a>00085 <span class="keywordtype">void</span> <a class="code" href="timer0_8h.html#a32e8f7bfb173750821d1254e1c81a378" title="Interruptfunktion des Timers0.">Tmr0IsrFnc</a>(<span class="keywordtype">void</span>) __critical;
+<a name="l00086"></a>00086 <span class="comment">/******************************************************************************/</span>
+<a name="l00087"></a>00087 
+<a name="l00088"></a>00088 <span class="comment">/**************************************************************************/</span>
+<a name="l00092"></a><a class="code" href="timer0_8h.html#ada35c76dd58bc709f9af92ca9531f710">00092</a> <span class="preprocessor">#define Tmr0Run()       (TR0 = 1)</span>
+<a name="l00093"></a>00093 <span class="preprocessor"></span><span class="comment">/******************************************************************************/</span>
+<a name="l00094"></a>00094 
+<a name="l00095"></a>00095 <span class="comment">/**************************************************************************/</span>
+<a name="l00099"></a><a class="code" href="timer0_8h.html#afccb9a1b56fe8d54180e0b85070b16b5">00099</a> <span class="preprocessor">#define Tmr0Stop()      (TR0 = 0)</span>
+<a name="l00100"></a>00100 <span class="preprocessor"></span><span class="comment">/******************************************************************************/</span>
+<a name="l00101"></a>00101 
+<a name="l00102"></a>00102 <span class="comment">/**************************************************************************/</span>
+<a name="l00106"></a><a class="code" href="timer0_8h.html#adfb3b93ba6378176d6835846605aa49e">00106</a> <span class="preprocessor">#define Tmr0IsrEna()    (ET0 = 1)</span>
+<a name="l00107"></a>00107 <span class="preprocessor"></span><span class="comment">/******************************************************************************/</span>
+<a name="l00108"></a>00108 
+<a name="l00109"></a>00109 <span class="comment">/**************************************************************************/</span>
+<a name="l00113"></a><a class="code" href="timer0_8h.html#a7878d2cfcf0ecd8118058c12c68973ea">00113</a> <span class="preprocessor">#define Tmr0IsrDis()    (ET0 = 0)</span>
+<a name="l00114"></a>00114 <span class="preprocessor"></span><span class="comment">/******************************************************************************/</span>
+<a name="l00115"></a>00115 
+<a name="l00116"></a>00116 <span class="preprocessor">#endif // __TIMER0_H__</span>
+</pre></div></div>
+</div>
+<hr class="footer"/><address class="footer"><small>Erzeugt am Sun Feb 20 2011 14:49:27 für t89c51cc02lib von&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

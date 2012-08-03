@@ -1,0 +1,538 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>t89c51cc02lib: isrvectors.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Erzeugt von Doxygen 1.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&nbsp;der&nbsp;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle">
+<h1>isrvectors.c-Dateireferenz</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Diese Datei beinhaltet die Interruptvectoren des (A)T89C51CC02.  
+<a href="#_details">Mehr ...</a></p>
+<code>#include &lt;<a class="el" href="isrvectors_8h_source.html">isrvectors.h</a>&gt;</code><br/>
+<div class="dynheader">
+Include-Abhängigkeitsdiagramm für isrvectors.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="isrvectors_8c__incl.png" border="0" usemap="#isrvectors_8c" alt=""/></div>
+<map name="isrvectors_8c" id="isrvectors_8c">
+<area shape="rect" id="node3" href="isrvectors_8h.html" title="Diese Datei beinhaltet die Interruptvectoren des (A)T89C51CC02." alt="" coords="67,86,157,117"/><area shape="rect" id="node5" href="t89c51cc02_8h.html" title="t89c51cc02.h" alt="" coords="5,166,104,197"/><area shape="rect" id="node7" href="mytypes_8h.html" title="Deklaration mit eigenen Dateitypen." alt="" coords="128,166,211,197"/></map>
+</div>
+
+<p><a href="isrvectors_8c_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a9c878d01e7bf9de9bbff147c0a54828c">IsrInit</a> ()</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialisiert die Interrupts und die Funktionszeiger.  <a href="#a9c878d01e7bf9de9bbff147c0a54828c"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#af0a7c6aed2f7598f5c0c1db18e7b91b8">IsrExt0</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für Externen Interrupt 0. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#af0a7c6aed2f7598f5c0c1db18e7b91b8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a63e9dfcc14600f0fd665b536632fffe5">IsrTmr0</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für Timer 0. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#a63e9dfcc14600f0fd665b536632fffe5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#ae9f612080bc3bd8eed4551501628ee1e">IsrExt1</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für Externen Interrupt 1. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#ae9f612080bc3bd8eed4551501628ee1e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#affb3922a614260ad01e73490ad675ab7">IsrTmr1</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für Timer 1. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#affb3922a614260ad01e73490ad675ab7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a87a0b8646506c4ef34672364cf312e33">IsrUart</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für UART. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#a87a0b8646506c4ef34672364cf312e33"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#aa3d2aba7cffdb521b2edac92c58dba79">IsrTmr2</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für Timer 2. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#aa3d2aba7cffdb521b2edac92c58dba79"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#af70b1c6c01e18f6c472e8d61cab5fc75">IsrPca</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für PCA-Modul. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#af70b1c6c01e18f6c472e8d61cab5fc75"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#ae49a703df08754f5bbc1cefa90a03293">IsrCan</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für CAN. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#ae49a703df08754f5bbc1cefa90a03293"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a004e43fb94082a5c3c774f519b0a8ce0">IsrAdc</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für AD-Wandler. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#a004e43fb94082a5c3c774f519b0a8ce0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a64000a7411d47d7ce039cd5f7eb4f775">IsrCanTmr</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Vector für CAN-Timer. Die Interruptflags werden nach dem Aufruf gelöscht.  <a href="#a64000a7411d47d7ce039cd5f7eb4f775"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variablen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a09bf0688c0798f2c274bd579a310be78">isrFncReset</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Reset.  <a href="#a09bf0688c0798f2c274bd579a310be78"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a764c4814dc88c94f5a40a3b1b8ddee4f">isrFncExt0</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR Externer Interrupt 0.  <a href="#a764c4814dc88c94f5a40a3b1b8ddee4f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a1ec3d7fd6bb3122548e536c452aaa576">isrFncTmr0</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR Timer 0.  <a href="#a1ec3d7fd6bb3122548e536c452aaa576"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#ae1e78ddb469688577c657e4a476ce88f">isrFncExt1</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR Externer Interrupt 1.  <a href="#ae1e78ddb469688577c657e4a476ce88f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#afb1795f72873a1d300a59a8a1b0c5b83">isrFncTmr1</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR Timer 1.  <a href="#afb1795f72873a1d300a59a8a1b0c5b83"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a2aaf20d2bd55e7e609cead3eb631d4b0">isrFncUart</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR UART.  <a href="#a2aaf20d2bd55e7e609cead3eb631d4b0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a6faca556615999ff710e065c2ebe643f">isrFncTmr2</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR Timer 2.  <a href="#a6faca556615999ff710e065c2ebe643f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#af7a6105bd28f3e87cc39becb4f232c36">isrFncPca</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR PCA-Timer.  <a href="#af7a6105bd28f3e87cc39becb4f232c36"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#aafd16e96b0fd27597b06dbf27fc61b95">isrFncCan</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR CAN.  <a href="#aafd16e96b0fd27597b06dbf27fc61b95"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#a5b81b5fadcfed123624bc0362b5d67fa">isrFncAdc</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR AD-Wandler.  <a href="#a5b81b5fadcfed123624bc0362b5d67fa"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void(*&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="isrvectors_8c.html#af1679ce8a451287116112e34f3b69b1e">isrFncCanTmr</a> )(void) = NULL_FNC</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Funktionszeiger ISR CAN Timer.  <a href="#af1679ce8a451287116112e34f3b69b1e"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p>Diese Datei beinhaltet die Interruptvectoren des (A)T89C51CC02. </p>
+<dl class="author"><dt><b>Autor:</b></dt><dd>Roman Buchert (<a href="mailto:roman.buchert@googlemail.com">roman.buchert@googlemail.com</a>) </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+<hr/><h2>Dokumentation der Funktionen</h2>
+<a class="anchor" id="a004e43fb94082a5c3c774f519b0a8ce0"></a><!-- doxytag: member="isrvectors.c::IsrAdc" ref="a004e43fb94082a5c3c774f519b0a8ce0" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrAdc </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für AD-Wandler. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00181">181</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae49a703df08754f5bbc1cefa90a03293"></a><!-- doxytag: member="isrvectors.c::IsrCan" ref="ae49a703df08754f5bbc1cefa90a03293" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrCan </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für CAN. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00166">166</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a64000a7411d47d7ce039cd5f7eb4f775"></a><!-- doxytag: member="isrvectors.c::IsrCanTmr" ref="a64000a7411d47d7ce039cd5f7eb4f775" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrCanTmr </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für CAN-Timer. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00195">195</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af0a7c6aed2f7598f5c0c1db18e7b91b8"></a><!-- doxytag: member="isrvectors.c::IsrExt0" ref="af0a7c6aed2f7598f5c0c1db18e7b91b8" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrExt0 </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für Externen Interrupt 0. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00058">58</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae9f612080bc3bd8eed4551501628ee1e"></a><!-- doxytag: member="isrvectors.c::IsrExt1" ref="ae9f612080bc3bd8eed4551501628ee1e" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrExt1 </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für Externen Interrupt 1. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00088">88</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a9c878d01e7bf9de9bbff147c0a54828c"></a><!-- doxytag: member="isrvectors.c::IsrInit" ref="a9c878d01e7bf9de9bbff147c0a54828c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrInit </td>
+          <td>(</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Initialisiert die Interrupts und die Funktionszeiger. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00038">38</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af70b1c6c01e18f6c472e8d61cab5fc75"></a><!-- doxytag: member="isrvectors.c::IsrPca" ref="af70b1c6c01e18f6c472e8d61cab5fc75" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrPca </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für PCA-Modul. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00149">149</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a63e9dfcc14600f0fd665b536632fffe5"></a><!-- doxytag: member="isrvectors.c::IsrTmr0" ref="a63e9dfcc14600f0fd665b536632fffe5" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrTmr0 </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für Timer 0. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00074">74</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="affb3922a614260ad01e73490ad675ab7"></a><!-- doxytag: member="isrvectors.c::IsrTmr1" ref="affb3922a614260ad01e73490ad675ab7" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrTmr1 </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für Timer 1. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00104">104</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa3d2aba7cffdb521b2edac92c58dba79"></a><!-- doxytag: member="isrvectors.c::IsrTmr2" ref="aa3d2aba7cffdb521b2edac92c58dba79" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrTmr2 </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für Timer 2. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00134">134</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a87a0b8646506c4ef34672364cf312e33"></a><!-- doxytag: member="isrvectors.c::IsrUart" ref="a87a0b8646506c4ef34672364cf312e33" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IsrUart </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Vector für UART. Die Interruptflags werden nach dem Aufruf gelöscht. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00118">118</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Variablen-Dokumentation</h2>
+<a class="anchor" id="a5b81b5fadcfed123624bc0362b5d67fa"></a><!-- doxytag: member="isrvectors.c::isrFncAdc" ref="a5b81b5fadcfed123624bc0362b5d67fa" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#a5b81b5fadcfed123624bc0362b5d67fa">isrFncAdc</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR AD-Wandler. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00031">31</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aafd16e96b0fd27597b06dbf27fc61b95"></a><!-- doxytag: member="isrvectors.c::isrFncCan" ref="aafd16e96b0fd27597b06dbf27fc61b95" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#aafd16e96b0fd27597b06dbf27fc61b95">isrFncCan</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR CAN. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00030">30</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1679ce8a451287116112e34f3b69b1e"></a><!-- doxytag: member="isrvectors.c::isrFncCanTmr" ref="af1679ce8a451287116112e34f3b69b1e" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#af1679ce8a451287116112e34f3b69b1e">isrFncCanTmr</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR CAN Timer. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00032">32</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a764c4814dc88c94f5a40a3b1b8ddee4f"></a><!-- doxytag: member="isrvectors.c::isrFncExt0" ref="a764c4814dc88c94f5a40a3b1b8ddee4f" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#a764c4814dc88c94f5a40a3b1b8ddee4f">isrFncExt0</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR Externer Interrupt 0. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00023">23</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae1e78ddb469688577c657e4a476ce88f"></a><!-- doxytag: member="isrvectors.c::isrFncExt1" ref="ae1e78ddb469688577c657e4a476ce88f" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#ae1e78ddb469688577c657e4a476ce88f">isrFncExt1</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR Externer Interrupt 1. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00025">25</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af7a6105bd28f3e87cc39becb4f232c36"></a><!-- doxytag: member="isrvectors.c::isrFncPca" ref="af7a6105bd28f3e87cc39becb4f232c36" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#af7a6105bd28f3e87cc39becb4f232c36">isrFncPca</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR PCA-Timer. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00029">29</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a09bf0688c0798f2c274bd579a310be78"></a><!-- doxytag: member="isrvectors.c::isrFncReset" ref="a09bf0688c0798f2c274bd579a310be78" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#a09bf0688c0798f2c274bd579a310be78">isrFncReset</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reset. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00022">22</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1ec3d7fd6bb3122548e536c452aaa576"></a><!-- doxytag: member="isrvectors.c::isrFncTmr0" ref="a1ec3d7fd6bb3122548e536c452aaa576" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#a1ec3d7fd6bb3122548e536c452aaa576">isrFncTmr0</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR Timer 0. </p>
+<p>Funktonszeiger ISR Timer 0. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00024">24</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afb1795f72873a1d300a59a8a1b0c5b83"></a><!-- doxytag: member="isrvectors.c::isrFncTmr1" ref="afb1795f72873a1d300a59a8a1b0c5b83" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#afb1795f72873a1d300a59a8a1b0c5b83">isrFncTmr1</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR Timer 1. </p>
+<p>Funktonszeiger ISR Timer 1. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00026">26</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6faca556615999ff710e065c2ebe643f"></a><!-- doxytag: member="isrvectors.c::isrFncTmr2" ref="a6faca556615999ff710e065c2ebe643f" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#a6faca556615999ff710e065c2ebe643f">isrFncTmr2</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR Timer 2. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00028">28</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a2aaf20d2bd55e7e609cead3eb631d4b0"></a><!-- doxytag: member="isrvectors.c::isrFncUart" ref="a2aaf20d2bd55e7e609cead3eb631d4b0" args=")(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void(* <a class="el" href="isrvectors_8c.html#a2aaf20d2bd55e7e609cead3eb631d4b0">isrFncUart</a>)(void) = NULL_FNC</td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Funktionszeiger ISR UART. </p>
+
+<p>Definiert in Zeile <a class="el" href="isrvectors_8c_source.html#l00027">27</a> der Datei <a class="el" href="isrvectors_8c_source.html">isrvectors.c</a>.</p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Erzeugt am Sun Feb 20 2011 14:49:27 für t89c51cc02lib von&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

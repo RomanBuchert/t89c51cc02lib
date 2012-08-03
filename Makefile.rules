@@ -1,0 +1,16 @@
+
+## Created by Anjuta
+MODEL = small
+CC = sdcc
+CFLAGS = --model-$(MODEL) --debug \
+		 --iram-size 0x0100 --xram-size 0x0100 --code-size 0x4000 \
+		 --xram-loc 0x0000 --code-loc 0x0000 \
+		 --opt-code-speed
+##		 
+
+INCFLAGS = -I../include/
+LDFLAGS = --verbose --model-$(MODEL) --debug
+LIBS = ../lib/t89c51cc02_$(MODEL).lib
+
+%.rel: %.c
+	$(CC) -c $(CFLAGS) $< $(INCFLAGS)

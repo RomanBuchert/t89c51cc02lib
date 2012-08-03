@@ -1,0 +1,1410 @@
+                              1 ;--------------------------------------------------------
+                              2 ; File Created by SDCC : free open source ANSI-C Compiler
+                              3 ; Version 2.9.0 #5416 (Feb  3 2010) (UNIX)
+                              4 ; This file was generated Sun Feb 20 14:49:25 2011
+                              5 ;--------------------------------------------------------
+                              6 	.module isrvectors
+                              7 	.optsdcc -mmcs51 --model-small
+                              8 	
+                              9 ;--------------------------------------------------------
+                             10 ; Public variables in this module
+                             11 ;--------------------------------------------------------
+                             12 	.globl _CCF0
+                             13 	.globl _CCF1
+                             14 	.globl _CCF2
+                             15 	.globl _CCF3
+                             16 	.globl _CCF4
+                             17 	.globl _CR
+                             18 	.globl _CF
+                             19 	.globl _ECAN
+                             20 	.globl _EADC
+                             21 	.globl _ETIM
+                             22 	.globl _EX0
+                             23 	.globl _ET0
+                             24 	.globl _EX1
+                             25 	.globl _ET1
+                             26 	.globl _ES
+                             27 	.globl _ET2
+                             28 	.globl _EC
+                             29 	.globl _EA
+                             30 	.globl _RI
+                             31 	.globl _TI
+                             32 	.globl _RB8
+                             33 	.globl _TB8
+                             34 	.globl _REN
+                             35 	.globl _SM2
+                             36 	.globl _SM1
+                             37 	.globl _FE
+                             38 	.globl _SM0
+                             39 	.globl _CP_RL2
+                             40 	.globl _C_T2
+                             41 	.globl _TR2
+                             42 	.globl _EXEN2
+                             43 	.globl _TCLK
+                             44 	.globl _RCLK
+                             45 	.globl _EXF2
+                             46 	.globl _TF2
+                             47 	.globl _IT0
+                             48 	.globl _IE0
+                             49 	.globl _IT1
+                             50 	.globl _IE1
+                             51 	.globl _TR0
+                             52 	.globl _TF0
+                             53 	.globl _TR1
+                             54 	.globl _TF1
+                             55 	.globl _P
+                             56 	.globl _UD
+                             57 	.globl _OV
+                             58 	.globl _RS0
+                             59 	.globl _RS1
+                             60 	.globl _F0
+                             61 	.globl _AC
+                             62 	.globl _CY
+                             63 	.globl _P4_0
+                             64 	.globl _P4_1
+                             65 	.globl _RXD
+                             66 	.globl _TXD
+                             67 	.globl _INT0
+                             68 	.globl _INT1
+                             69 	.globl _T0
+                             70 	.globl _T1
+                             71 	.globl _WR
+                             72 	.globl _RD
+                             73 	.globl _P3_0
+                             74 	.globl _P3_1
+                             75 	.globl _P3_2
+                             76 	.globl _P3_3
+                             77 	.globl _P3_4
+                             78 	.globl _P3_5
+                             79 	.globl _P3_6
+                             80 	.globl _P3_7
+                             81 	.globl _P2_0
+                             82 	.globl _P2_1
+                             83 	.globl _P1_0
+                             84 	.globl _P1_1
+                             85 	.globl _P1_2
+                             86 	.globl _P1_3
+                             87 	.globl _P1_4
+                             88 	.globl _P1_5
+                             89 	.globl _P1_6
+                             90 	.globl _P1_7
+                             91 	.globl _CANEN
+                             92 	.globl _CANIDM4
+                             93 	.globl _CANIDM3
+                             94 	.globl _CANIDM2
+                             95 	.globl _CANIDM1
+                             96 	.globl _CANIE
+                             97 	.globl _CANGIE
+                             98 	.globl _CANIDT4
+                             99 	.globl _CANIDT3
+                            100 	.globl _CANIDT2
+                            101 	.globl _CANIDT1
+                            102 	.globl _CANSIT
+                            103 	.globl _CANBT3
+                            104 	.globl _CANBT2
+                            105 	.globl _CANBT1
+                            106 	.globl _CANCONCH
+                            107 	.globl _CANSTCH
+                            108 	.globl _CANPAGE
+                            109 	.globl _CANSTMPH
+                            110 	.globl _CANSTMPL
+                            111 	.globl _CANTIMH
+                            112 	.globl _CANTIML
+                            113 	.globl _CANGCON
+                            114 	.globl _CANGSTA
+                            115 	.globl _CANTTCH
+                            116 	.globl _CANTTCL
+                            117 	.globl _CANMSG
+                            118 	.globl _CANTCON
+                            119 	.globl _CANREC
+                            120 	.globl _CANTEC
+                            121 	.globl _CANGIT
+                            122 	.globl _CCAPM4
+                            123 	.globl _CCAP4L
+                            124 	.globl _CCAP4H
+                            125 	.globl _CCAPM3
+                            126 	.globl _CCAP3L
+                            127 	.globl _CCAP3H
+                            128 	.globl _CCAPM2
+                            129 	.globl _CCAP2L
+                            130 	.globl _CCAP2H
+                            131 	.globl _CCAPM1
+                            132 	.globl _CCAP1L
+                            133 	.globl _CCAP1H
+                            134 	.globl _CCAPM0
+                            135 	.globl _CCAP0L
+                            136 	.globl _CCAP0H
+                            137 	.globl _CL
+                            138 	.globl _CH
+                            139 	.globl _CMOD
+                            140 	.globl _CCON
+                            141 	.globl _IEN1
+                            142 	.globl _IPH0
+                            143 	.globl _IPL0
+                            144 	.globl _IEN0
+                            145 	.globl _IPH1
+                            146 	.globl _IPL1
+                            147 	.globl _AUXR1
+                            148 	.globl _AUXR
+                            149 	.globl _EECON
+                            150 	.globl _FCON
+                            151 	.globl _ADCF
+                            152 	.globl _ADDH
+                            153 	.globl _ADDL
+                            154 	.globl _ADCON
+                            155 	.globl _ADCLK
+                            156 	.globl _SADDR
+                            157 	.globl _SADEN
+                            158 	.globl _SBUF
+                            159 	.globl _SCON
+                            160 	.globl _WDTPRG
+                            161 	.globl _WDTRST
+                            162 	.globl _RCAP2H
+                            163 	.globl _RCAP2L
+                            164 	.globl _TH2
+                            165 	.globl _TH1
+                            166 	.globl _TH0
+                            167 	.globl _TL2
+                            168 	.globl _TL1
+                            169 	.globl _TL0
+                            170 	.globl _T2MOD
+                            171 	.globl _T2CON
+                            172 	.globl _TMOD
+                            173 	.globl _TCON
+                            174 	.globl _CKCON
+                            175 	.globl _PCON
+                            176 	.globl _DPH
+                            177 	.globl _DPL
+                            178 	.globl _SP
+                            179 	.globl _B
+                            180 	.globl _ACC
+                            181 	.globl _PSW
+                            182 	.globl _P4
+                            183 	.globl _P3
+                            184 	.globl _P2
+                            185 	.globl _P1
+                            186 	.globl _isrFncCanTmr
+                            187 	.globl _isrFncAdc
+                            188 	.globl _isrFncCan
+                            189 	.globl _isrFncPca
+                            190 	.globl _isrFncTmr2
+                            191 	.globl _isrFncUart
+                            192 	.globl _isrFncTmr1
+                            193 	.globl _isrFncExt1
+                            194 	.globl _isrFncTmr0
+                            195 	.globl _isrFncExt0
+                            196 	.globl _isrFncReset
+                            197 	.globl _IsrInit
+                            198 	.globl _IsrExt0
+                            199 	.globl _IsrTmr0
+                            200 	.globl _IsrExt1
+                            201 	.globl _IsrTmr1
+                            202 	.globl _IsrUart
+                            203 	.globl _IsrTmr2
+                            204 	.globl _IsrPca
+                            205 	.globl _IsrCan
+                            206 	.globl _IsrAdc
+                            207 	.globl _IsrCanTmr
+                            208 ;--------------------------------------------------------
+                            209 ; special function registers
+                            210 ;--------------------------------------------------------
+                            211 	.area RSEG    (DATA)
+                    0090    212 G$P1$0$0 == 0x0090
+                    0090    213 _P1	=	0x0090
+                    00A0    214 G$P2$0$0 == 0x00a0
+                    00A0    215 _P2	=	0x00a0
+                    00B0    216 G$P3$0$0 == 0x00b0
+                    00B0    217 _P3	=	0x00b0
+                    00C0    218 G$P4$0$0 == 0x00c0
+                    00C0    219 _P4	=	0x00c0
+                    00D0    220 G$PSW$0$0 == 0x00d0
+                    00D0    221 _PSW	=	0x00d0
+                    00E0    222 G$ACC$0$0 == 0x00e0
+                    00E0    223 _ACC	=	0x00e0
+                    00F0    224 G$B$0$0 == 0x00f0
+                    00F0    225 _B	=	0x00f0
+                    0081    226 G$SP$0$0 == 0x0081
+                    0081    227 _SP	=	0x0081
+                    0082    228 G$DPL$0$0 == 0x0082
+                    0082    229 _DPL	=	0x0082
+                    0083    230 G$DPH$0$0 == 0x0083
+                    0083    231 _DPH	=	0x0083
+                    0087    232 G$PCON$0$0 == 0x0087
+                    0087    233 _PCON	=	0x0087
+                    008F    234 G$CKCON$0$0 == 0x008f
+                    008F    235 _CKCON	=	0x008f
+                    0088    236 G$TCON$0$0 == 0x0088
+                    0088    237 _TCON	=	0x0088
+                    0089    238 G$TMOD$0$0 == 0x0089
+                    0089    239 _TMOD	=	0x0089
+                    00C8    240 G$T2CON$0$0 == 0x00c8
+                    00C8    241 _T2CON	=	0x00c8
+                    00C9    242 G$T2MOD$0$0 == 0x00c9
+                    00C9    243 _T2MOD	=	0x00c9
+                    008A    244 G$TL0$0$0 == 0x008a
+                    008A    245 _TL0	=	0x008a
+                    008B    246 G$TL1$0$0 == 0x008b
+                    008B    247 _TL1	=	0x008b
+                    00CC    248 G$TL2$0$0 == 0x00cc
+                    00CC    249 _TL2	=	0x00cc
+                    008C    250 G$TH0$0$0 == 0x008c
+                    008C    251 _TH0	=	0x008c
+                    008D    252 G$TH1$0$0 == 0x008d
+                    008D    253 _TH1	=	0x008d
+                    00CD    254 G$TH2$0$0 == 0x00cd
+                    00CD    255 _TH2	=	0x00cd
+                    00CA    256 G$RCAP2L$0$0 == 0x00ca
+                    00CA    257 _RCAP2L	=	0x00ca
+                    00CB    258 G$RCAP2H$0$0 == 0x00cb
+                    00CB    259 _RCAP2H	=	0x00cb
+                    00A6    260 G$WDTRST$0$0 == 0x00a6
+                    00A6    261 _WDTRST	=	0x00a6
+                    00A7    262 G$WDTPRG$0$0 == 0x00a7
+                    00A7    263 _WDTPRG	=	0x00a7
+                    0098    264 G$SCON$0$0 == 0x0098
+                    0098    265 _SCON	=	0x0098
+                    0099    266 G$SBUF$0$0 == 0x0099
+                    0099    267 _SBUF	=	0x0099
+                    00B9    268 G$SADEN$0$0 == 0x00b9
+                    00B9    269 _SADEN	=	0x00b9
+                    00A9    270 G$SADDR$0$0 == 0x00a9
+                    00A9    271 _SADDR	=	0x00a9
+                    00F2    272 G$ADCLK$0$0 == 0x00f2
+                    00F2    273 _ADCLK	=	0x00f2
+                    00F3    274 G$ADCON$0$0 == 0x00f3
+                    00F3    275 _ADCON	=	0x00f3
+                    00F4    276 G$ADDL$0$0 == 0x00f4
+                    00F4    277 _ADDL	=	0x00f4
+                    00F5    278 G$ADDH$0$0 == 0x00f5
+                    00F5    279 _ADDH	=	0x00f5
+                    00F6    280 G$ADCF$0$0 == 0x00f6
+                    00F6    281 _ADCF	=	0x00f6
+                    00D1    282 G$FCON$0$0 == 0x00d1
+                    00D1    283 _FCON	=	0x00d1
+                    00D2    284 G$EECON$0$0 == 0x00d2
+                    00D2    285 _EECON	=	0x00d2
+                    008E    286 G$AUXR$0$0 == 0x008e
+                    008E    287 _AUXR	=	0x008e
+                    00A2    288 G$AUXR1$0$0 == 0x00a2
+                    00A2    289 _AUXR1	=	0x00a2
+                    00F8    290 G$IPL1$0$0 == 0x00f8
+                    00F8    291 _IPL1	=	0x00f8
+                    00F7    292 G$IPH1$0$0 == 0x00f7
+                    00F7    293 _IPH1	=	0x00f7
+                    00A8    294 G$IEN0$0$0 == 0x00a8
+                    00A8    295 _IEN0	=	0x00a8
+                    00B8    296 G$IPL0$0$0 == 0x00b8
+                    00B8    297 _IPL0	=	0x00b8
+                    00B7    298 G$IPH0$0$0 == 0x00b7
+                    00B7    299 _IPH0	=	0x00b7
+                    00E8    300 G$IEN1$0$0 == 0x00e8
+                    00E8    301 _IEN1	=	0x00e8
+                    00D8    302 G$CCON$0$0 == 0x00d8
+                    00D8    303 _CCON	=	0x00d8
+                    00D9    304 G$CMOD$0$0 == 0x00d9
+                    00D9    305 _CMOD	=	0x00d9
+                    00F9    306 G$CH$0$0 == 0x00f9
+                    00F9    307 _CH	=	0x00f9
+                    00E9    308 G$CL$0$0 == 0x00e9
+                    00E9    309 _CL	=	0x00e9
+                    00FA    310 G$CCAP0H$0$0 == 0x00fa
+                    00FA    311 _CCAP0H	=	0x00fa
+                    00EA    312 G$CCAP0L$0$0 == 0x00ea
+                    00EA    313 _CCAP0L	=	0x00ea
+                    00DA    314 G$CCAPM0$0$0 == 0x00da
+                    00DA    315 _CCAPM0	=	0x00da
+                    00FB    316 G$CCAP1H$0$0 == 0x00fb
+                    00FB    317 _CCAP1H	=	0x00fb
+                    00EB    318 G$CCAP1L$0$0 == 0x00eb
+                    00EB    319 _CCAP1L	=	0x00eb
+                    00DB    320 G$CCAPM1$0$0 == 0x00db
+                    00DB    321 _CCAPM1	=	0x00db
+                    00FC    322 G$CCAP2H$0$0 == 0x00fc
+                    00FC    323 _CCAP2H	=	0x00fc
+                    00EC    324 G$CCAP2L$0$0 == 0x00ec
+                    00EC    325 _CCAP2L	=	0x00ec
+                    00DC    326 G$CCAPM2$0$0 == 0x00dc
+                    00DC    327 _CCAPM2	=	0x00dc
+                    00FD    328 G$CCAP3H$0$0 == 0x00fd
+                    00FD    329 _CCAP3H	=	0x00fd
+                    00ED    330 G$CCAP3L$0$0 == 0x00ed
+                    00ED    331 _CCAP3L	=	0x00ed
+                    00DD    332 G$CCAPM3$0$0 == 0x00dd
+                    00DD    333 _CCAPM3	=	0x00dd
+                    00FE    334 G$CCAP4H$0$0 == 0x00fe
+                    00FE    335 _CCAP4H	=	0x00fe
+                    00EE    336 G$CCAP4L$0$0 == 0x00ee
+                    00EE    337 _CCAP4L	=	0x00ee
+                    00DE    338 G$CCAPM4$0$0 == 0x00de
+                    00DE    339 _CCAPM4	=	0x00de
+                    009B    340 G$CANGIT$0$0 == 0x009b
+                    009B    341 _CANGIT	=	0x009b
+                    009C    342 G$CANTEC$0$0 == 0x009c
+                    009C    343 _CANTEC	=	0x009c
+                    009D    344 G$CANREC$0$0 == 0x009d
+                    009D    345 _CANREC	=	0x009d
+                    00A1    346 G$CANTCON$0$0 == 0x00a1
+                    00A1    347 _CANTCON	=	0x00a1
+                    00A3    348 G$CANMSG$0$0 == 0x00a3
+                    00A3    349 _CANMSG	=	0x00a3
+                    00A4    350 G$CANTTCL$0$0 == 0x00a4
+                    00A4    351 _CANTTCL	=	0x00a4
+                    00A5    352 G$CANTTCH$0$0 == 0x00a5
+                    00A5    353 _CANTTCH	=	0x00a5
+                    00AA    354 G$CANGSTA$0$0 == 0x00aa
+                    00AA    355 _CANGSTA	=	0x00aa
+                    00AB    356 G$CANGCON$0$0 == 0x00ab
+                    00AB    357 _CANGCON	=	0x00ab
+                    00AC    358 G$CANTIML$0$0 == 0x00ac
+                    00AC    359 _CANTIML	=	0x00ac
+                    00AD    360 G$CANTIMH$0$0 == 0x00ad
+                    00AD    361 _CANTIMH	=	0x00ad
+                    00AE    362 G$CANSTMPL$0$0 == 0x00ae
+                    00AE    363 _CANSTMPL	=	0x00ae
+                    00AF    364 G$CANSTMPH$0$0 == 0x00af
+                    00AF    365 _CANSTMPH	=	0x00af
+                    00B1    366 G$CANPAGE$0$0 == 0x00b1
+                    00B1    367 _CANPAGE	=	0x00b1
+                    00B2    368 G$CANSTCH$0$0 == 0x00b2
+                    00B2    369 _CANSTCH	=	0x00b2
+                    00B3    370 G$CANCONCH$0$0 == 0x00b3
+                    00B3    371 _CANCONCH	=	0x00b3
+                    00B4    372 G$CANBT1$0$0 == 0x00b4
+                    00B4    373 _CANBT1	=	0x00b4
+                    00B5    374 G$CANBT2$0$0 == 0x00b5
+                    00B5    375 _CANBT2	=	0x00b5
+                    00B6    376 G$CANBT3$0$0 == 0x00b6
+                    00B6    377 _CANBT3	=	0x00b6
+                    00BB    378 G$CANSIT$0$0 == 0x00bb
+                    00BB    379 _CANSIT	=	0x00bb
+                    00BC    380 G$CANIDT1$0$0 == 0x00bc
+                    00BC    381 _CANIDT1	=	0x00bc
+                    00BD    382 G$CANIDT2$0$0 == 0x00bd
+                    00BD    383 _CANIDT2	=	0x00bd
+                    00BE    384 G$CANIDT3$0$0 == 0x00be
+                    00BE    385 _CANIDT3	=	0x00be
+                    00BF    386 G$CANIDT4$0$0 == 0x00bf
+                    00BF    387 _CANIDT4	=	0x00bf
+                    00C1    388 G$CANGIE$0$0 == 0x00c1
+                    00C1    389 _CANGIE	=	0x00c1
+                    00C3    390 G$CANIE$0$0 == 0x00c3
+                    00C3    391 _CANIE	=	0x00c3
+                    00C4    392 G$CANIDM1$0$0 == 0x00c4
+                    00C4    393 _CANIDM1	=	0x00c4
+                    00C5    394 G$CANIDM2$0$0 == 0x00c5
+                    00C5    395 _CANIDM2	=	0x00c5
+                    00C6    396 G$CANIDM3$0$0 == 0x00c6
+                    00C6    397 _CANIDM3	=	0x00c6
+                    00C7    398 G$CANIDM4$0$0 == 0x00c7
+                    00C7    399 _CANIDM4	=	0x00c7
+                    00CF    400 G$CANEN$0$0 == 0x00cf
+                    00CF    401 _CANEN	=	0x00cf
+                            402 ;--------------------------------------------------------
+                            403 ; special function bits
+                            404 ;--------------------------------------------------------
+                            405 	.area RSEG    (DATA)
+                    0097    406 G$P1_7$0$0 == 0x0097
+                    0097    407 _P1_7	=	0x0097
+                    0096    408 G$P1_6$0$0 == 0x0096
+                    0096    409 _P1_6	=	0x0096
+                    0095    410 G$P1_5$0$0 == 0x0095
+                    0095    411 _P1_5	=	0x0095
+                    0094    412 G$P1_4$0$0 == 0x0094
+                    0094    413 _P1_4	=	0x0094
+                    0093    414 G$P1_3$0$0 == 0x0093
+                    0093    415 _P1_3	=	0x0093
+                    0092    416 G$P1_2$0$0 == 0x0092
+                    0092    417 _P1_2	=	0x0092
+                    0091    418 G$P1_1$0$0 == 0x0091
+                    0091    419 _P1_1	=	0x0091
+                    0090    420 G$P1_0$0$0 == 0x0090
+                    0090    421 _P1_0	=	0x0090
+                    00A1    422 G$P2_1$0$0 == 0x00a1
+                    00A1    423 _P2_1	=	0x00a1
+                    00A0    424 G$P2_0$0$0 == 0x00a0
+                    00A0    425 _P2_0	=	0x00a0
+                    00B7    426 G$P3_7$0$0 == 0x00b7
+                    00B7    427 _P3_7	=	0x00b7
+                    00B6    428 G$P3_6$0$0 == 0x00b6
+                    00B6    429 _P3_6	=	0x00b6
+                    00B5    430 G$P3_5$0$0 == 0x00b5
+                    00B5    431 _P3_5	=	0x00b5
+                    00B4    432 G$P3_4$0$0 == 0x00b4
+                    00B4    433 _P3_4	=	0x00b4
+                    00B3    434 G$P3_3$0$0 == 0x00b3
+                    00B3    435 _P3_3	=	0x00b3
+                    00B2    436 G$P3_2$0$0 == 0x00b2
+                    00B2    437 _P3_2	=	0x00b2
+                    00B1    438 G$P3_1$0$0 == 0x00b1
+                    00B1    439 _P3_1	=	0x00b1
+                    00B0    440 G$P3_0$0$0 == 0x00b0
+                    00B0    441 _P3_0	=	0x00b0
+                    00B7    442 G$RD$0$0 == 0x00b7
+                    00B7    443 _RD	=	0x00b7
+                    00B6    444 G$WR$0$0 == 0x00b6
+                    00B6    445 _WR	=	0x00b6
+                    00B5    446 G$T1$0$0 == 0x00b5
+                    00B5    447 _T1	=	0x00b5
+                    00B4    448 G$T0$0$0 == 0x00b4
+                    00B4    449 _T0	=	0x00b4
+                    00B3    450 G$INT1$0$0 == 0x00b3
+                    00B3    451 _INT1	=	0x00b3
+                    00B2    452 G$INT0$0$0 == 0x00b2
+                    00B2    453 _INT0	=	0x00b2
+                    00B1    454 G$TXD$0$0 == 0x00b1
+                    00B1    455 _TXD	=	0x00b1
+                    00B0    456 G$RXD$0$0 == 0x00b0
+                    00B0    457 _RXD	=	0x00b0
+                    00C1    458 G$P4_1$0$0 == 0x00c1
+                    00C1    459 _P4_1	=	0x00c1
+                    00C0    460 G$P4_0$0$0 == 0x00c0
+                    00C0    461 _P4_0	=	0x00c0
+                    00D7    462 G$CY$0$0 == 0x00d7
+                    00D7    463 _CY	=	0x00d7
+                    00D6    464 G$AC$0$0 == 0x00d6
+                    00D6    465 _AC	=	0x00d6
+                    00D5    466 G$F0$0$0 == 0x00d5
+                    00D5    467 _F0	=	0x00d5
+                    00D4    468 G$RS1$0$0 == 0x00d4
+                    00D4    469 _RS1	=	0x00d4
+                    00D3    470 G$RS0$0$0 == 0x00d3
+                    00D3    471 _RS0	=	0x00d3
+                    00D2    472 G$OV$0$0 == 0x00d2
+                    00D2    473 _OV	=	0x00d2
+                    00D1    474 G$UD$0$0 == 0x00d1
+                    00D1    475 _UD	=	0x00d1
+                    00D0    476 G$P$0$0 == 0x00d0
+                    00D0    477 _P	=	0x00d0
+                    008F    478 G$TF1$0$0 == 0x008f
+                    008F    479 _TF1	=	0x008f
+                    008E    480 G$TR1$0$0 == 0x008e
+                    008E    481 _TR1	=	0x008e
+                    008D    482 G$TF0$0$0 == 0x008d
+                    008D    483 _TF0	=	0x008d
+                    008C    484 G$TR0$0$0 == 0x008c
+                    008C    485 _TR0	=	0x008c
+                    008B    486 G$IE1$0$0 == 0x008b
+                    008B    487 _IE1	=	0x008b
+                    008A    488 G$IT1$0$0 == 0x008a
+                    008A    489 _IT1	=	0x008a
+                    0089    490 G$IE0$0$0 == 0x0089
+                    0089    491 _IE0	=	0x0089
+                    0088    492 G$IT0$0$0 == 0x0088
+                    0088    493 _IT0	=	0x0088
+                    00CF    494 G$TF2$0$0 == 0x00cf
+                    00CF    495 _TF2	=	0x00cf
+                    00CE    496 G$EXF2$0$0 == 0x00ce
+                    00CE    497 _EXF2	=	0x00ce
+                    00CD    498 G$RCLK$0$0 == 0x00cd
+                    00CD    499 _RCLK	=	0x00cd
+                    00CC    500 G$TCLK$0$0 == 0x00cc
+                    00CC    501 _TCLK	=	0x00cc
+                    00CB    502 G$EXEN2$0$0 == 0x00cb
+                    00CB    503 _EXEN2	=	0x00cb
+                    00CA    504 G$TR2$0$0 == 0x00ca
+                    00CA    505 _TR2	=	0x00ca
+                    00C9    506 G$C_T2$0$0 == 0x00c9
+                    00C9    507 _C_T2	=	0x00c9
+                    00C8    508 G$CP_RL2$0$0 == 0x00c8
+                    00C8    509 _CP_RL2	=	0x00c8
+                    009F    510 G$SM0$0$0 == 0x009f
+                    009F    511 _SM0	=	0x009f
+                    009F    512 G$FE$0$0 == 0x009f
+                    009F    513 _FE	=	0x009f
+                    009E    514 G$SM1$0$0 == 0x009e
+                    009E    515 _SM1	=	0x009e
+                    009D    516 G$SM2$0$0 == 0x009d
+                    009D    517 _SM2	=	0x009d
+                    009C    518 G$REN$0$0 == 0x009c
+                    009C    519 _REN	=	0x009c
+                    009B    520 G$TB8$0$0 == 0x009b
+                    009B    521 _TB8	=	0x009b
+                    009A    522 G$RB8$0$0 == 0x009a
+                    009A    523 _RB8	=	0x009a
+                    0099    524 G$TI$0$0 == 0x0099
+                    0099    525 _TI	=	0x0099
+                    0098    526 G$RI$0$0 == 0x0098
+                    0098    527 _RI	=	0x0098
+                    00AF    528 G$EA$0$0 == 0x00af
+                    00AF    529 _EA	=	0x00af
+                    00AE    530 G$EC$0$0 == 0x00ae
+                    00AE    531 _EC	=	0x00ae
+                    00AD    532 G$ET2$0$0 == 0x00ad
+                    00AD    533 _ET2	=	0x00ad
+                    00AC    534 G$ES$0$0 == 0x00ac
+                    00AC    535 _ES	=	0x00ac
+                    00AB    536 G$ET1$0$0 == 0x00ab
+                    00AB    537 _ET1	=	0x00ab
+                    00AA    538 G$EX1$0$0 == 0x00aa
+                    00AA    539 _EX1	=	0x00aa
+                    00A9    540 G$ET0$0$0 == 0x00a9
+                    00A9    541 _ET0	=	0x00a9
+                    00A8    542 G$EX0$0$0 == 0x00a8
+                    00A8    543 _EX0	=	0x00a8
+                    00EA    544 G$ETIM$0$0 == 0x00ea
+                    00EA    545 _ETIM	=	0x00ea
+                    00E9    546 G$EADC$0$0 == 0x00e9
+                    00E9    547 _EADC	=	0x00e9
+                    00E8    548 G$ECAN$0$0 == 0x00e8
+                    00E8    549 _ECAN	=	0x00e8
+                    00DF    550 G$CF$0$0 == 0x00df
+                    00DF    551 _CF	=	0x00df
+                    00DE    552 G$CR$0$0 == 0x00de
+                    00DE    553 _CR	=	0x00de
+                    00DC    554 G$CCF4$0$0 == 0x00dc
+                    00DC    555 _CCF4	=	0x00dc
+                    00DB    556 G$CCF3$0$0 == 0x00db
+                    00DB    557 _CCF3	=	0x00db
+                    00DA    558 G$CCF2$0$0 == 0x00da
+                    00DA    559 _CCF2	=	0x00da
+                    00D9    560 G$CCF1$0$0 == 0x00d9
+                    00D9    561 _CCF1	=	0x00d9
+                    00D8    562 G$CCF0$0$0 == 0x00d8
+                    00D8    563 _CCF0	=	0x00d8
+                            564 ;--------------------------------------------------------
+                            565 ; overlayable register banks
+                            566 ;--------------------------------------------------------
+                            567 	.area REG_BANK_0	(REL,OVR,DATA)
+   0000                     568 	.ds 8
+                            569 ;--------------------------------------------------------
+                            570 ; overlayable bit register bank
+                            571 ;--------------------------------------------------------
+                            572 	.area BIT_BANK	(REL,OVR,DATA)
+   0000                     573 bits:
+   0000                     574 	.ds 1
+                    8000    575 	b0 = bits[0]
+                    8100    576 	b1 = bits[1]
+                    8200    577 	b2 = bits[2]
+                    8300    578 	b3 = bits[3]
+                    8400    579 	b4 = bits[4]
+                    8500    580 	b5 = bits[5]
+                    8600    581 	b6 = bits[6]
+                    8700    582 	b7 = bits[7]
+                            583 ;--------------------------------------------------------
+                            584 ; internal ram data
+                            585 ;--------------------------------------------------------
+                            586 	.area DSEG    (DATA)
+                    0000    587 G$isrFncReset$0$0==.
+   0000                     588 _isrFncReset::
+   0000                     589 	.ds 2
+                    0002    590 G$isrFncExt0$0$0==.
+   0002                     591 _isrFncExt0::
+   0002                     592 	.ds 2
+                    0004    593 G$isrFncTmr0$0$0==.
+   0004                     594 _isrFncTmr0::
+   0004                     595 	.ds 2
+                    0006    596 G$isrFncExt1$0$0==.
+   0006                     597 _isrFncExt1::
+   0006                     598 	.ds 2
+                    0008    599 G$isrFncTmr1$0$0==.
+   0008                     600 _isrFncTmr1::
+   0008                     601 	.ds 2
+                    000A    602 G$isrFncUart$0$0==.
+   000A                     603 _isrFncUart::
+   000A                     604 	.ds 2
+                    000C    605 G$isrFncTmr2$0$0==.
+   000C                     606 _isrFncTmr2::
+   000C                     607 	.ds 2
+                    000E    608 G$isrFncPca$0$0==.
+   000E                     609 _isrFncPca::
+   000E                     610 	.ds 2
+                    0010    611 G$isrFncCan$0$0==.
+   0010                     612 _isrFncCan::
+   0010                     613 	.ds 2
+                    0012    614 G$isrFncAdc$0$0==.
+   0012                     615 _isrFncAdc::
+   0012                     616 	.ds 2
+                    0014    617 G$isrFncCanTmr$0$0==.
+   0014                     618 _isrFncCanTmr::
+   0014                     619 	.ds 2
+                            620 ;--------------------------------------------------------
+                            621 ; overlayable items in internal ram 
+                            622 ;--------------------------------------------------------
+                            623 	.area OSEG    (OVR,DATA)
+                            624 ;--------------------------------------------------------
+                            625 ; indirectly addressable internal ram data
+                            626 ;--------------------------------------------------------
+                            627 	.area ISEG    (DATA)
+                            628 ;--------------------------------------------------------
+                            629 ; absolute internal ram data
+                            630 ;--------------------------------------------------------
+                            631 	.area IABS    (ABS,DATA)
+                            632 	.area IABS    (ABS,DATA)
+                            633 ;--------------------------------------------------------
+                            634 ; bit data
+                            635 ;--------------------------------------------------------
+                            636 	.area BSEG    (BIT)
+                            637 ;--------------------------------------------------------
+                            638 ; paged external ram data
+                            639 ;--------------------------------------------------------
+                            640 	.area PSEG    (PAG,XDATA)
+                            641 ;--------------------------------------------------------
+                            642 ; external ram data
+                            643 ;--------------------------------------------------------
+                            644 	.area XSEG    (XDATA)
+                            645 ;--------------------------------------------------------
+                            646 ; absolute external ram data
+                            647 ;--------------------------------------------------------
+                            648 	.area XABS    (ABS,XDATA)
+                            649 ;--------------------------------------------------------
+                            650 ; external initialized ram data
+                            651 ;--------------------------------------------------------
+                            652 	.area XISEG   (XDATA)
+                            653 	.area HOME    (CODE)
+                            654 	.area GSINIT0 (CODE)
+                            655 	.area GSINIT1 (CODE)
+                            656 	.area GSINIT2 (CODE)
+                            657 	.area GSINIT3 (CODE)
+                            658 	.area GSINIT4 (CODE)
+                            659 	.area GSINIT5 (CODE)
+                            660 	.area GSINIT  (CODE)
+                            661 	.area GSFINAL (CODE)
+                            662 	.area CSEG    (CODE)
+                            663 ;--------------------------------------------------------
+                            664 ; global & static initialisations
+                            665 ;--------------------------------------------------------
+                            666 	.area HOME    (CODE)
+                            667 	.area GSINIT  (CODE)
+                            668 	.area GSFINAL (CODE)
+                            669 	.area GSINIT  (CODE)
+                    0000    670 	G$IsrCanTmr$0$0 ==.
+                    0000    671 	C$isrvectors.c$22$1$1 ==.
+                            672 ;	isrvectors.c:22: void (*isrFncReset) (void) = NULL_FNC;  ///< Reset
+   0000 E4                  673 	clr	a
+   0001 F5*00               674 	mov	_isrFncReset,a
+   0003 F5*01               675 	mov	(_isrFncReset + 1),a
+                    0005    676 	G$IsrCanTmr$0$0 ==.
+                    0005    677 	C$isrvectors.c$23$1$1 ==.
+                            678 ;	isrvectors.c:23: void (*isrFncExt0) (void) = NULL_FNC;   ///< Funktionszeiger ISR Externer Interrupt 0
+   0005 E4                  679 	clr	a
+   0006 F5*02               680 	mov	_isrFncExt0,a
+   0008 F5*03               681 	mov	(_isrFncExt0 + 1),a
+                    000A    682 	G$IsrCanTmr$0$0 ==.
+                    000A    683 	C$isrvectors.c$24$1$1 ==.
+                            684 ;	isrvectors.c:24: void (*isrFncTmr0) (void) = NULL_FNC;   ///< Funktionszeiger ISR Timer 0
+   000A E4                  685 	clr	a
+   000B F5*04               686 	mov	_isrFncTmr0,a
+   000D F5*05               687 	mov	(_isrFncTmr0 + 1),a
+                    000F    688 	G$IsrCanTmr$0$0 ==.
+                    000F    689 	C$isrvectors.c$25$1$1 ==.
+                            690 ;	isrvectors.c:25: void (*isrFncExt1) (void) = NULL_FNC;   ///< Funktionszeiger ISR Externer Interrupt 1
+   000F E4                  691 	clr	a
+   0010 F5*06               692 	mov	_isrFncExt1,a
+   0012 F5*07               693 	mov	(_isrFncExt1 + 1),a
+                    0014    694 	G$IsrCanTmr$0$0 ==.
+                    0014    695 	C$isrvectors.c$26$1$1 ==.
+                            696 ;	isrvectors.c:26: void (*isrFncTmr1) (void) = NULL_FNC;   ///< Funktionszeiger ISR Timer 1
+   0014 E4                  697 	clr	a
+   0015 F5*08               698 	mov	_isrFncTmr1,a
+   0017 F5*09               699 	mov	(_isrFncTmr1 + 1),a
+                    0019    700 	G$IsrCanTmr$0$0 ==.
+                    0019    701 	C$isrvectors.c$27$1$1 ==.
+                            702 ;	isrvectors.c:27: void (*isrFncUart) (void) = NULL_FNC;   ///< Funktionszeiger ISR UART
+   0019 E4                  703 	clr	a
+   001A F5*0A               704 	mov	_isrFncUart,a
+   001C F5*0B               705 	mov	(_isrFncUart + 1),a
+                    001E    706 	G$IsrCanTmr$0$0 ==.
+                    001E    707 	C$isrvectors.c$28$1$1 ==.
+                            708 ;	isrvectors.c:28: void (*isrFncTmr2) (void) = NULL_FNC;   ///< Funktionszeiger ISR Timer 2
+   001E E4                  709 	clr	a
+   001F F5*0C               710 	mov	_isrFncTmr2,a
+   0021 F5*0D               711 	mov	(_isrFncTmr2 + 1),a
+                    0023    712 	G$IsrCanTmr$0$0 ==.
+                    0023    713 	C$isrvectors.c$29$1$1 ==.
+                            714 ;	isrvectors.c:29: void (*isrFncPca) (void) = NULL_FNC;	///< Funktionszeiger ISR PCA-Timer
+   0023 E4                  715 	clr	a
+   0024 F5*0E               716 	mov	_isrFncPca,a
+   0026 F5*0F               717 	mov	(_isrFncPca + 1),a
+                    0028    718 	G$IsrCanTmr$0$0 ==.
+                    0028    719 	C$isrvectors.c$30$1$1 ==.
+                            720 ;	isrvectors.c:30: void (*isrFncCan) (void) = NULL_FNC;	///< Funktionszeiger ISR CAN
+   0028 E4                  721 	clr	a
+   0029 F5*10               722 	mov	_isrFncCan,a
+   002B F5*11               723 	mov	(_isrFncCan + 1),a
+                    002D    724 	G$IsrCanTmr$0$0 ==.
+                    002D    725 	C$isrvectors.c$31$1$1 ==.
+                            726 ;	isrvectors.c:31: void (*isrFncAdc) (void) = NULL_FNC;	///< Funktionszeiger ISR AD-Wandler
+   002D E4                  727 	clr	a
+   002E F5*12               728 	mov	_isrFncAdc,a
+   0030 F5*13               729 	mov	(_isrFncAdc + 1),a
+                    0032    730 	G$IsrCanTmr$0$0 ==.
+                    0032    731 	C$isrvectors.c$32$1$1 ==.
+                            732 ;	isrvectors.c:32: void (*isrFncCanTmr) (void) = NULL_FNC; ///< Funktionszeiger ISR CAN Timer
+   0032 E4                  733 	clr	a
+   0033 F5*14               734 	mov	_isrFncCanTmr,a
+   0035 F5*15               735 	mov	(_isrFncCanTmr + 1),a
+                            736 ;--------------------------------------------------------
+                            737 ; Home
+                            738 ;--------------------------------------------------------
+                            739 	.area HOME    (CODE)
+                            740 	.area HOME    (CODE)
+                            741 ;--------------------------------------------------------
+                            742 ; code
+                            743 ;--------------------------------------------------------
+                            744 	.area CSEG    (CODE)
+                            745 ;------------------------------------------------------------
+                            746 ;Allocation info for local variables in function 'IsrInit'
+                            747 ;------------------------------------------------------------
+                            748 ;------------------------------------------------------------
+                    0000    749 	G$IsrInit$0$0 ==.
+                    0000    750 	C$isrvectors.c$38$0$0 ==.
+                            751 ;	isrvectors.c:38: void IsrInit()
+                            752 ;	-----------------------------------------
+                            753 ;	 function IsrInit
+                            754 ;	-----------------------------------------
+   0000                     755 _IsrInit:
+                    0002    756 	ar2 = 0x02
+                    0003    757 	ar3 = 0x03
+                    0004    758 	ar4 = 0x04
+                    0005    759 	ar5 = 0x05
+                    0006    760 	ar6 = 0x06
+                    0007    761 	ar7 = 0x07
+                    0000    762 	ar0 = 0x00
+                    0001    763 	ar1 = 0x01
+                    0000    764 	C$isrvectors.c$40$1$1 ==.
+                            765 ;	isrvectors.c:40: isrFncExt0 = NULL_FNC;		//Externer Interrupt 0
+                    0000    766 	C$isrvectors.c$41$1$1 ==.
+                            767 ;	isrvectors.c:41: isrFncTmr0 = NULL_FNC;		//Timer 0
+                    0000    768 	C$isrvectors.c$42$1$1 ==.
+                            769 ;	isrvectors.c:42: isrFncExt1 = NULL_FNC;		//Externer Interrupt 1
+                    0000    770 	C$isrvectors.c$43$1$1 ==.
+                            771 ;	isrvectors.c:43: isrFncTmr1 = NULL_FNC;		//Timer 1
+   0000 E4                  772 	clr	a
+   0001 F5*02               773 	mov	_isrFncExt0,a
+   0003 F5*03               774 	mov	(_isrFncExt0 + 1),a
+   0005 F5*04               775 	mov	_isrFncTmr0,a
+   0007 F5*05               776 	mov	(_isrFncTmr0 + 1),a
+   0009 F5*06               777 	mov	_isrFncExt1,a
+   000B F5*07               778 	mov	(_isrFncExt1 + 1),a
+   000D F5*08               779 	mov	_isrFncTmr1,a
+   000F F5*09               780 	mov	(_isrFncTmr1 + 1),a
+                    0011    781 	C$isrvectors.c$44$1$1 ==.
+                            782 ;	isrvectors.c:44: isrFncUart = NULL_FNC;		//UART
+                    0011    783 	C$isrvectors.c$45$1$1 ==.
+                            784 ;	isrvectors.c:45: isrFncTmr2 = NULL_FNC;		//Timer 2
+                    0011    785 	C$isrvectors.c$46$1$1 ==.
+                            786 ;	isrvectors.c:46: isrFncPca = NULL_FNC;		//PCA-Timer
+                    0011    787 	C$isrvectors.c$47$1$1 ==.
+                            788 ;	isrvectors.c:47: isrFncCan = NULL_FNC;		//CAN
+   0011 E4                  789 	clr	a
+   0012 F5*0A               790 	mov	_isrFncUart,a
+   0014 F5*0B               791 	mov	(_isrFncUart + 1),a
+   0016 F5*0C               792 	mov	_isrFncTmr2,a
+   0018 F5*0D               793 	mov	(_isrFncTmr2 + 1),a
+   001A F5*0E               794 	mov	_isrFncPca,a
+   001C F5*0F               795 	mov	(_isrFncPca + 1),a
+   001E F5*10               796 	mov	_isrFncCan,a
+   0020 F5*11               797 	mov	(_isrFncCan + 1),a
+                    0022    798 	C$isrvectors.c$48$1$1 ==.
+                            799 ;	isrvectors.c:48: isrFncAdc = NULL_FNC;		//AD-Wandler
+                    0022    800 	C$isrvectors.c$49$1$1 ==.
+                            801 ;	isrvectors.c:49: isrFncCanTmr = NULL_FNC;	//CAN Timer
+   0022 E4                  802 	clr	a
+   0023 F5*12               803 	mov	_isrFncAdc,a
+   0025 F5*13               804 	mov	(_isrFncAdc + 1),a
+   0027 F5*14               805 	mov	_isrFncCanTmr,a
+   0029 F5*15               806 	mov	(_isrFncCanTmr + 1),a
+                    002B    807 	C$isrvectors.c$51$1$1 ==.
+                    002B    808 	XG$IsrInit$0$0 ==.
+   002B 22                  809 	ret
+                            810 ;------------------------------------------------------------
+                            811 ;Allocation info for local variables in function 'IsrExt0'
+                            812 ;------------------------------------------------------------
+                            813 ;------------------------------------------------------------
+                    002C    814 	G$IsrExt0$0$0 ==.
+                    002C    815 	C$isrvectors.c$58$1$1 ==.
+                            816 ;	isrvectors.c:58: void IsrExt0(void) __interrupt (0)
+                            817 ;	-----------------------------------------
+                            818 ;	 function IsrExt0
+                            819 ;	-----------------------------------------
+   002C                     820 _IsrExt0:
+   002C C0*00               821 	push	bits
+   002E C0 E0               822 	push	acc
+   0030 C0 F0               823 	push	b
+   0032 C0 82               824 	push	dpl
+   0034 C0 83               825 	push	dph
+   0036 C0 02               826 	push	(0+2)
+   0038 C0 03               827 	push	(0+3)
+   003A C0 04               828 	push	(0+4)
+   003C C0 05               829 	push	(0+5)
+   003E C0 06               830 	push	(0+6)
+   0040 C0 07               831 	push	(0+7)
+   0042 C0 00               832 	push	(0+0)
+   0044 C0 01               833 	push	(0+1)
+   0046 C0 D0               834 	push	psw
+   0048 75 D0 00            835 	mov	psw,#0x00
+                    004B    836 	C$isrvectors.c$60$1$1 ==.
+                            837 ;	isrvectors.c:60: EX0 = 0;
+   004B C2 A8               838 	clr	_EX0
+                    004D    839 	C$isrvectors.c$61$1$1 ==.
+                            840 ;	isrvectors.c:61: if (isrFncExt0 != NULL_FNC)
+   004D E5*02               841 	mov	a,_isrFncExt0
+   004F 45*03               842 	orl	a,(_isrFncExt0 + 1)
+   0051 60 09               843 	jz	00102$
+                    0053    844 	C$isrvectors.c$63$2$2 ==.
+                            845 ;	isrvectors.c:63: isrFncExt0();
+   0053 85*02 82            846 	mov	dpl,_isrFncExt0
+   0056 85*03 83            847 	mov	dph,(_isrFncExt0 + 1)
+   0059 12s00r00            848 	lcall	__sdcc_call_dptr
+   005C                     849 00102$:
+                    005C    850 	C$isrvectors.c$65$1$1 ==.
+                            851 ;	isrvectors.c:65: IE0 = 0;
+   005C C2 89               852 	clr	_IE0
+                    005E    853 	C$isrvectors.c$66$1$1 ==.
+                            854 ;	isrvectors.c:66: EX1 = 1;
+   005E D2 AA               855 	setb	_EX1
+   0060 D0 D0               856 	pop	psw
+   0062 D0 01               857 	pop	(0+1)
+   0064 D0 00               858 	pop	(0+0)
+   0066 D0 07               859 	pop	(0+7)
+   0068 D0 06               860 	pop	(0+6)
+   006A D0 05               861 	pop	(0+5)
+   006C D0 04               862 	pop	(0+4)
+   006E D0 03               863 	pop	(0+3)
+   0070 D0 02               864 	pop	(0+2)
+   0072 D0 83               865 	pop	dph
+   0074 D0 82               866 	pop	dpl
+   0076 D0 F0               867 	pop	b
+   0078 D0 E0               868 	pop	acc
+   007A D0*00               869 	pop	bits
+                    007C    870 	C$isrvectors.c$67$1$1 ==.
+                    007C    871 	XG$IsrExt0$0$0 ==.
+   007C 32                  872 	reti
+                            873 ;------------------------------------------------------------
+                            874 ;Allocation info for local variables in function 'IsrTmr0'
+                            875 ;------------------------------------------------------------
+                            876 ;------------------------------------------------------------
+                    007D    877 	G$IsrTmr0$0$0 ==.
+                    007D    878 	C$isrvectors.c$74$1$1 ==.
+                            879 ;	isrvectors.c:74: void IsrTmr0(void) __interrupt (1)
+                            880 ;	-----------------------------------------
+                            881 ;	 function IsrTmr0
+                            882 ;	-----------------------------------------
+   007D                     883 _IsrTmr0:
+   007D C0*00               884 	push	bits
+   007F C0 E0               885 	push	acc
+   0081 C0 F0               886 	push	b
+   0083 C0 82               887 	push	dpl
+   0085 C0 83               888 	push	dph
+   0087 C0 02               889 	push	(0+2)
+   0089 C0 03               890 	push	(0+3)
+   008B C0 04               891 	push	(0+4)
+   008D C0 05               892 	push	(0+5)
+   008F C0 06               893 	push	(0+6)
+   0091 C0 07               894 	push	(0+7)
+   0093 C0 00               895 	push	(0+0)
+   0095 C0 01               896 	push	(0+1)
+   0097 C0 D0               897 	push	psw
+   0099 75 D0 00            898 	mov	psw,#0x00
+                    009C    899 	C$isrvectors.c$76$1$1 ==.
+                            900 ;	isrvectors.c:76: if (isrFncTmr0 != NULL_FNC)
+   009C E5*04               901 	mov	a,_isrFncTmr0
+   009E 45*05               902 	orl	a,(_isrFncTmr0 + 1)
+   00A0 60 09               903 	jz	00102$
+                    00A2    904 	C$isrvectors.c$78$2$2 ==.
+                            905 ;	isrvectors.c:78: isrFncTmr0();
+   00A2 85*04 82            906 	mov	dpl,_isrFncTmr0
+   00A5 85*05 83            907 	mov	dph,(_isrFncTmr0 + 1)
+   00A8 12s00r00            908 	lcall	__sdcc_call_dptr
+   00AB                     909 00102$:
+                    00AB    910 	C$isrvectors.c$80$1$1 ==.
+                            911 ;	isrvectors.c:80: TF0 = 0;
+   00AB C2 8D               912 	clr	_TF0
+   00AD D0 D0               913 	pop	psw
+   00AF D0 01               914 	pop	(0+1)
+   00B1 D0 00               915 	pop	(0+0)
+   00B3 D0 07               916 	pop	(0+7)
+   00B5 D0 06               917 	pop	(0+6)
+   00B7 D0 05               918 	pop	(0+5)
+   00B9 D0 04               919 	pop	(0+4)
+   00BB D0 03               920 	pop	(0+3)
+   00BD D0 02               921 	pop	(0+2)
+   00BF D0 83               922 	pop	dph
+   00C1 D0 82               923 	pop	dpl
+   00C3 D0 F0               924 	pop	b
+   00C5 D0 E0               925 	pop	acc
+   00C7 D0*00               926 	pop	bits
+                    00C9    927 	C$isrvectors.c$81$1$1 ==.
+                    00C9    928 	XG$IsrTmr0$0$0 ==.
+   00C9 32                  929 	reti
+                            930 ;------------------------------------------------------------
+                            931 ;Allocation info for local variables in function 'IsrExt1'
+                            932 ;------------------------------------------------------------
+                            933 ;------------------------------------------------------------
+                    00CA    934 	G$IsrExt1$0$0 ==.
+                    00CA    935 	C$isrvectors.c$88$1$1 ==.
+                            936 ;	isrvectors.c:88: void IsrExt1(void) __interrupt (2)
+                            937 ;	-----------------------------------------
+                            938 ;	 function IsrExt1
+                            939 ;	-----------------------------------------
+   00CA                     940 _IsrExt1:
+   00CA C0*00               941 	push	bits
+   00CC C0 E0               942 	push	acc
+   00CE C0 F0               943 	push	b
+   00D0 C0 82               944 	push	dpl
+   00D2 C0 83               945 	push	dph
+   00D4 C0 02               946 	push	(0+2)
+   00D6 C0 03               947 	push	(0+3)
+   00D8 C0 04               948 	push	(0+4)
+   00DA C0 05               949 	push	(0+5)
+   00DC C0 06               950 	push	(0+6)
+   00DE C0 07               951 	push	(0+7)
+   00E0 C0 00               952 	push	(0+0)
+   00E2 C0 01               953 	push	(0+1)
+   00E4 C0 D0               954 	push	psw
+   00E6 75 D0 00            955 	mov	psw,#0x00
+                    00E9    956 	C$isrvectors.c$90$1$1 ==.
+                            957 ;	isrvectors.c:90: EX1 = 0;
+   00E9 C2 AA               958 	clr	_EX1
+                    00EB    959 	C$isrvectors.c$91$1$1 ==.
+                            960 ;	isrvectors.c:91: if (isrFncExt1 != NULL_FNC)
+   00EB E5*06               961 	mov	a,_isrFncExt1
+   00ED 45*07               962 	orl	a,(_isrFncExt1 + 1)
+   00EF 60 09               963 	jz	00102$
+                    00F1    964 	C$isrvectors.c$93$2$2 ==.
+                            965 ;	isrvectors.c:93: isrFncExt1();
+   00F1 85*06 82            966 	mov	dpl,_isrFncExt1
+   00F4 85*07 83            967 	mov	dph,(_isrFncExt1 + 1)
+   00F7 12s00r00            968 	lcall	__sdcc_call_dptr
+   00FA                     969 00102$:
+                    00FA    970 	C$isrvectors.c$95$1$1 ==.
+                            971 ;	isrvectors.c:95: IE1 = 0;
+   00FA C2 8B               972 	clr	_IE1
+                    00FC    973 	C$isrvectors.c$96$1$1 ==.
+                            974 ;	isrvectors.c:96: EX0 = 1;
+   00FC D2 A8               975 	setb	_EX0
+   00FE D0 D0               976 	pop	psw
+   0100 D0 01               977 	pop	(0+1)
+   0102 D0 00               978 	pop	(0+0)
+   0104 D0 07               979 	pop	(0+7)
+   0106 D0 06               980 	pop	(0+6)
+   0108 D0 05               981 	pop	(0+5)
+   010A D0 04               982 	pop	(0+4)
+   010C D0 03               983 	pop	(0+3)
+   010E D0 02               984 	pop	(0+2)
+   0110 D0 83               985 	pop	dph
+   0112 D0 82               986 	pop	dpl
+   0114 D0 F0               987 	pop	b
+   0116 D0 E0               988 	pop	acc
+   0118 D0*00               989 	pop	bits
+                    011A    990 	C$isrvectors.c$97$1$1 ==.
+                    011A    991 	XG$IsrExt1$0$0 ==.
+   011A 32                  992 	reti
+                            993 ;------------------------------------------------------------
+                            994 ;Allocation info for local variables in function 'IsrTmr1'
+                            995 ;------------------------------------------------------------
+                            996 ;------------------------------------------------------------
+                    011B    997 	G$IsrTmr1$0$0 ==.
+                    011B    998 	C$isrvectors.c$104$1$1 ==.
+                            999 ;	isrvectors.c:104: void IsrTmr1(void) __interrupt (3)
+                           1000 ;	-----------------------------------------
+                           1001 ;	 function IsrTmr1
+                           1002 ;	-----------------------------------------
+   011B                    1003 _IsrTmr1:
+   011B C0*00              1004 	push	bits
+   011D C0 E0              1005 	push	acc
+   011F C0 F0              1006 	push	b
+   0121 C0 82              1007 	push	dpl
+   0123 C0 83              1008 	push	dph
+   0125 C0 02              1009 	push	(0+2)
+   0127 C0 03              1010 	push	(0+3)
+   0129 C0 04              1011 	push	(0+4)
+   012B C0 05              1012 	push	(0+5)
+   012D C0 06              1013 	push	(0+6)
+   012F C0 07              1014 	push	(0+7)
+   0131 C0 00              1015 	push	(0+0)
+   0133 C0 01              1016 	push	(0+1)
+   0135 C0 D0              1017 	push	psw
+   0137 75 D0 00           1018 	mov	psw,#0x00
+                    013A   1019 	C$isrvectors.c$106$1$1 ==.
+                           1020 ;	isrvectors.c:106: if (isrFncTmr1 != NULL_FNC)
+   013A E5*08              1021 	mov	a,_isrFncTmr1
+   013C 45*09              1022 	orl	a,(_isrFncTmr1 + 1)
+   013E 60 09              1023 	jz	00102$
+                    0140   1024 	C$isrvectors.c$108$2$2 ==.
+                           1025 ;	isrvectors.c:108: isrFncTmr1();
+   0140 85*08 82           1026 	mov	dpl,_isrFncTmr1
+   0143 85*09 83           1027 	mov	dph,(_isrFncTmr1 + 1)
+   0146 12s00r00           1028 	lcall	__sdcc_call_dptr
+   0149                    1029 00102$:
+                    0149   1030 	C$isrvectors.c$110$1$1 ==.
+                           1031 ;	isrvectors.c:110: TF1 = 0;
+   0149 C2 8F              1032 	clr	_TF1
+   014B D0 D0              1033 	pop	psw
+   014D D0 01              1034 	pop	(0+1)
+   014F D0 00              1035 	pop	(0+0)
+   0151 D0 07              1036 	pop	(0+7)
+   0153 D0 06              1037 	pop	(0+6)
+   0155 D0 05              1038 	pop	(0+5)
+   0157 D0 04              1039 	pop	(0+4)
+   0159 D0 03              1040 	pop	(0+3)
+   015B D0 02              1041 	pop	(0+2)
+   015D D0 83              1042 	pop	dph
+   015F D0 82              1043 	pop	dpl
+   0161 D0 F0              1044 	pop	b
+   0163 D0 E0              1045 	pop	acc
+   0165 D0*00              1046 	pop	bits
+                    0167   1047 	C$isrvectors.c$111$1$1 ==.
+                    0167   1048 	XG$IsrTmr1$0$0 ==.
+   0167 32                 1049 	reti
+                           1050 ;------------------------------------------------------------
+                           1051 ;Allocation info for local variables in function 'IsrUart'
+                           1052 ;------------------------------------------------------------
+                           1053 ;------------------------------------------------------------
+                    0168   1054 	G$IsrUart$0$0 ==.
+                    0168   1055 	C$isrvectors.c$118$1$1 ==.
+                           1056 ;	isrvectors.c:118: void IsrUart(void) __interrupt (4)
+                           1057 ;	-----------------------------------------
+                           1058 ;	 function IsrUart
+                           1059 ;	-----------------------------------------
+   0168                    1060 _IsrUart:
+   0168 C0*00              1061 	push	bits
+   016A C0 E0              1062 	push	acc
+   016C C0 F0              1063 	push	b
+   016E C0 82              1064 	push	dpl
+   0170 C0 83              1065 	push	dph
+   0172 C0 02              1066 	push	(0+2)
+   0174 C0 03              1067 	push	(0+3)
+   0176 C0 04              1068 	push	(0+4)
+   0178 C0 05              1069 	push	(0+5)
+   017A C0 06              1070 	push	(0+6)
+   017C C0 07              1071 	push	(0+7)
+   017E C0 00              1072 	push	(0+0)
+   0180 C0 01              1073 	push	(0+1)
+   0182 C0 D0              1074 	push	psw
+   0184 75 D0 00           1075 	mov	psw,#0x00
+                    0187   1076 	C$isrvectors.c$120$1$1 ==.
+                           1077 ;	isrvectors.c:120: if (isrFncUart != NULL_FNC)
+   0187 E5*0A              1078 	mov	a,_isrFncUart
+   0189 45*0B              1079 	orl	a,(_isrFncUart + 1)
+   018B 60 09              1080 	jz	00102$
+                    018D   1081 	C$isrvectors.c$122$2$2 ==.
+                           1082 ;	isrvectors.c:122: isrFncUart();
+   018D 85*0A 82           1083 	mov	dpl,_isrFncUart
+   0190 85*0B 83           1084 	mov	dph,(_isrFncUart + 1)
+   0193 12s00r00           1085 	lcall	__sdcc_call_dptr
+   0196                    1086 00102$:
+                    0196   1087 	C$isrvectors.c$125$1$1 ==.
+                           1088 ;	isrvectors.c:125: RI = 0;
+   0196 C2 98              1089 	clr	_RI
+                    0198   1090 	C$isrvectors.c$126$1$1 ==.
+                           1091 ;	isrvectors.c:126: TI = 0;
+   0198 C2 99              1092 	clr	_TI
+   019A D0 D0              1093 	pop	psw
+   019C D0 01              1094 	pop	(0+1)
+   019E D0 00              1095 	pop	(0+0)
+   01A0 D0 07              1096 	pop	(0+7)
+   01A2 D0 06              1097 	pop	(0+6)
+   01A4 D0 05              1098 	pop	(0+5)
+   01A6 D0 04              1099 	pop	(0+4)
+   01A8 D0 03              1100 	pop	(0+3)
+   01AA D0 02              1101 	pop	(0+2)
+   01AC D0 83              1102 	pop	dph
+   01AE D0 82              1103 	pop	dpl
+   01B0 D0 F0              1104 	pop	b
+   01B2 D0 E0              1105 	pop	acc
+   01B4 D0*00              1106 	pop	bits
+                    01B6   1107 	C$isrvectors.c$127$1$1 ==.
+                    01B6   1108 	XG$IsrUart$0$0 ==.
+   01B6 32                 1109 	reti
+                           1110 ;------------------------------------------------------------
+                           1111 ;Allocation info for local variables in function 'IsrTmr2'
+                           1112 ;------------------------------------------------------------
+                           1113 ;------------------------------------------------------------
+                    01B7   1114 	G$IsrTmr2$0$0 ==.
+                    01B7   1115 	C$isrvectors.c$134$1$1 ==.
+                           1116 ;	isrvectors.c:134: void IsrTmr2(void) __interrupt (5)
+                           1117 ;	-----------------------------------------
+                           1118 ;	 function IsrTmr2
+                           1119 ;	-----------------------------------------
+   01B7                    1120 _IsrTmr2:
+   01B7 C0*00              1121 	push	bits
+   01B9 C0 E0              1122 	push	acc
+   01BB C0 F0              1123 	push	b
+   01BD C0 82              1124 	push	dpl
+   01BF C0 83              1125 	push	dph
+   01C1 C0 02              1126 	push	(0+2)
+   01C3 C0 03              1127 	push	(0+3)
+   01C5 C0 04              1128 	push	(0+4)
+   01C7 C0 05              1129 	push	(0+5)
+   01C9 C0 06              1130 	push	(0+6)
+   01CB C0 07              1131 	push	(0+7)
+   01CD C0 00              1132 	push	(0+0)
+   01CF C0 01              1133 	push	(0+1)
+   01D1 C0 D0              1134 	push	psw
+   01D3 75 D0 00           1135 	mov	psw,#0x00
+                    01D6   1136 	C$isrvectors.c$136$1$1 ==.
+                           1137 ;	isrvectors.c:136: if (isrFncTmr2 != NULL_FNC)
+   01D6 E5*0C              1138 	mov	a,_isrFncTmr2
+   01D8 45*0D              1139 	orl	a,(_isrFncTmr2 + 1)
+   01DA 60 09              1140 	jz	00102$
+                    01DC   1141 	C$isrvectors.c$138$2$2 ==.
+                           1142 ;	isrvectors.c:138: isrFncTmr2();
+   01DC 85*0C 82           1143 	mov	dpl,_isrFncTmr2
+   01DF 85*0D 83           1144 	mov	dph,(_isrFncTmr2 + 1)
+   01E2 12s00r00           1145 	lcall	__sdcc_call_dptr
+   01E5                    1146 00102$:
+                    01E5   1147 	C$isrvectors.c$140$1$1 ==.
+                           1148 ;	isrvectors.c:140: TF2 = 0;
+   01E5 C2 CF              1149 	clr	_TF2
+                    01E7   1150 	C$isrvectors.c$141$1$1 ==.
+                           1151 ;	isrvectors.c:141: EXF2 = 0;
+   01E7 C2 CE              1152 	clr	_EXF2
+   01E9 D0 D0              1153 	pop	psw
+   01EB D0 01              1154 	pop	(0+1)
+   01ED D0 00              1155 	pop	(0+0)
+   01EF D0 07              1156 	pop	(0+7)
+   01F1 D0 06              1157 	pop	(0+6)
+   01F3 D0 05              1158 	pop	(0+5)
+   01F5 D0 04              1159 	pop	(0+4)
+   01F7 D0 03              1160 	pop	(0+3)
+   01F9 D0 02              1161 	pop	(0+2)
+   01FB D0 83              1162 	pop	dph
+   01FD D0 82              1163 	pop	dpl
+   01FF D0 F0              1164 	pop	b
+   0201 D0 E0              1165 	pop	acc
+   0203 D0*00              1166 	pop	bits
+                    0205   1167 	C$isrvectors.c$142$1$1 ==.
+                    0205   1168 	XG$IsrTmr2$0$0 ==.
+   0205 32                 1169 	reti
+                           1170 ;------------------------------------------------------------
+                           1171 ;Allocation info for local variables in function 'IsrPca'
+                           1172 ;------------------------------------------------------------
+                           1173 ;------------------------------------------------------------
+                    0206   1174 	G$IsrPca$0$0 ==.
+                    0206   1175 	C$isrvectors.c$149$1$1 ==.
+                           1176 ;	isrvectors.c:149: void IsrPca(void) __interrupt (6)
+                           1177 ;	-----------------------------------------
+                           1178 ;	 function IsrPca
+                           1179 ;	-----------------------------------------
+   0206                    1180 _IsrPca:
+   0206 C0*00              1181 	push	bits
+   0208 C0 E0              1182 	push	acc
+   020A C0 F0              1183 	push	b
+   020C C0 82              1184 	push	dpl
+   020E C0 83              1185 	push	dph
+   0210 C0 02              1186 	push	(0+2)
+   0212 C0 03              1187 	push	(0+3)
+   0214 C0 04              1188 	push	(0+4)
+   0216 C0 05              1189 	push	(0+5)
+   0218 C0 06              1190 	push	(0+6)
+   021A C0 07              1191 	push	(0+7)
+   021C C0 00              1192 	push	(0+0)
+   021E C0 01              1193 	push	(0+1)
+   0220 C0 D0              1194 	push	psw
+   0222 75 D0 00           1195 	mov	psw,#0x00
+                    0225   1196 	C$isrvectors.c$151$1$1 ==.
+                           1197 ;	isrvectors.c:151: if (isrFncPca != NULL_FNC)
+   0225 E5*0E              1198 	mov	a,_isrFncPca
+   0227 45*0F              1199 	orl	a,(_isrFncPca + 1)
+   0229 60 09              1200 	jz	00102$
+                    022B   1201 	C$isrvectors.c$153$2$2 ==.
+                           1202 ;	isrvectors.c:153: isrFncPca();
+   022B 85*0E 82           1203 	mov	dpl,_isrFncPca
+   022E 85*0F 83           1204 	mov	dph,(_isrFncPca + 1)
+   0231 12s00r00           1205 	lcall	__sdcc_call_dptr
+   0234                    1206 00102$:
+                    0234   1207 	C$isrvectors.c$156$1$1 ==.
+                           1208 ;	isrvectors.c:156: CF = 0;
+   0234 C2 DF              1209 	clr	_CF
+                    0236   1210 	C$isrvectors.c$157$1$1 ==.
+                           1211 ;	isrvectors.c:157: CCF0 = 0;
+   0236 C2 D8              1212 	clr	_CCF0
+                    0238   1213 	C$isrvectors.c$158$1$1 ==.
+                           1214 ;	isrvectors.c:158: CCF1 = 0;
+   0238 C2 D9              1215 	clr	_CCF1
+   023A D0 D0              1216 	pop	psw
+   023C D0 01              1217 	pop	(0+1)
+   023E D0 00              1218 	pop	(0+0)
+   0240 D0 07              1219 	pop	(0+7)
+   0242 D0 06              1220 	pop	(0+6)
+   0244 D0 05              1221 	pop	(0+5)
+   0246 D0 04              1222 	pop	(0+4)
+   0248 D0 03              1223 	pop	(0+3)
+   024A D0 02              1224 	pop	(0+2)
+   024C D0 83              1225 	pop	dph
+   024E D0 82              1226 	pop	dpl
+   0250 D0 F0              1227 	pop	b
+   0252 D0 E0              1228 	pop	acc
+   0254 D0*00              1229 	pop	bits
+                    0256   1230 	C$isrvectors.c$159$1$1 ==.
+                    0256   1231 	XG$IsrPca$0$0 ==.
+   0256 32                 1232 	reti
+                           1233 ;------------------------------------------------------------
+                           1234 ;Allocation info for local variables in function 'IsrCan'
+                           1235 ;------------------------------------------------------------
+                           1236 ;------------------------------------------------------------
+                    0257   1237 	G$IsrCan$0$0 ==.
+                    0257   1238 	C$isrvectors.c$166$1$1 ==.
+                           1239 ;	isrvectors.c:166: void IsrCan(void) __interrupt (7)
+                           1240 ;	-----------------------------------------
+                           1241 ;	 function IsrCan
+                           1242 ;	-----------------------------------------
+   0257                    1243 _IsrCan:
+   0257 C0*00              1244 	push	bits
+   0259 C0 E0              1245 	push	acc
+   025B C0 F0              1246 	push	b
+   025D C0 82              1247 	push	dpl
+   025F C0 83              1248 	push	dph
+   0261 C0 02              1249 	push	(0+2)
+   0263 C0 03              1250 	push	(0+3)
+   0265 C0 04              1251 	push	(0+4)
+   0267 C0 05              1252 	push	(0+5)
+   0269 C0 06              1253 	push	(0+6)
+   026B C0 07              1254 	push	(0+7)
+   026D C0 00              1255 	push	(0+0)
+   026F C0 01              1256 	push	(0+1)
+   0271 C0 D0              1257 	push	psw
+   0273 75 D0 00           1258 	mov	psw,#0x00
+                    0276   1259 	C$isrvectors.c$168$1$1 ==.
+                           1260 ;	isrvectors.c:168: if (isrFncCan != NULL_FNC)
+   0276 E5*10              1261 	mov	a,_isrFncCan
+   0278 45*11              1262 	orl	a,(_isrFncCan + 1)
+   027A 60 09              1263 	jz	00102$
+                    027C   1264 	C$isrvectors.c$170$2$2 ==.
+                           1265 ;	isrvectors.c:170: isrFncCan();
+   027C 85*10 82           1266 	mov	dpl,_isrFncCan
+   027F 85*11 83           1267 	mov	dph,(_isrFncCan + 1)
+   0282 12s00r00           1268 	lcall	__sdcc_call_dptr
+   0285                    1269 00102$:
+                    0285   1270 	C$isrvectors.c$172$1$1 ==.
+                           1271 ;	isrvectors.c:172: CANSTCH &= ~0x80;
+   0285 53 B2 7F           1272 	anl	_CANSTCH,#0x7F
+                    0288   1273 	C$isrvectors.c$173$1$1 ==.
+                           1274 ;	isrvectors.c:173: CANGIT &= ~0x1F;
+   0288 53 9B E0           1275 	anl	_CANGIT,#0xE0
+   028B D0 D0              1276 	pop	psw
+   028D D0 01              1277 	pop	(0+1)
+   028F D0 00              1278 	pop	(0+0)
+   0291 D0 07              1279 	pop	(0+7)
+   0293 D0 06              1280 	pop	(0+6)
+   0295 D0 05              1281 	pop	(0+5)
+   0297 D0 04              1282 	pop	(0+4)
+   0299 D0 03              1283 	pop	(0+3)
+   029B D0 02              1284 	pop	(0+2)
+   029D D0 83              1285 	pop	dph
+   029F D0 82              1286 	pop	dpl
+   02A1 D0 F0              1287 	pop	b
+   02A3 D0 E0              1288 	pop	acc
+   02A5 D0*00              1289 	pop	bits
+                    02A7   1290 	C$isrvectors.c$174$1$1 ==.
+                    02A7   1291 	XG$IsrCan$0$0 ==.
+   02A7 32                 1292 	reti
+                           1293 ;------------------------------------------------------------
+                           1294 ;Allocation info for local variables in function 'IsrAdc'
+                           1295 ;------------------------------------------------------------
+                           1296 ;------------------------------------------------------------
+                    02A8   1297 	G$IsrAdc$0$0 ==.
+                    02A8   1298 	C$isrvectors.c$181$1$1 ==.
+                           1299 ;	isrvectors.c:181: void IsrAdc(void) __interrupt (8)
+                           1300 ;	-----------------------------------------
+                           1301 ;	 function IsrAdc
+                           1302 ;	-----------------------------------------
+   02A8                    1303 _IsrAdc:
+   02A8 C0*00              1304 	push	bits
+   02AA C0 E0              1305 	push	acc
+   02AC C0 F0              1306 	push	b
+   02AE C0 82              1307 	push	dpl
+   02B0 C0 83              1308 	push	dph
+   02B2 C0 02              1309 	push	(0+2)
+   02B4 C0 03              1310 	push	(0+3)
+   02B6 C0 04              1311 	push	(0+4)
+   02B8 C0 05              1312 	push	(0+5)
+   02BA C0 06              1313 	push	(0+6)
+   02BC C0 07              1314 	push	(0+7)
+   02BE C0 00              1315 	push	(0+0)
+   02C0 C0 01              1316 	push	(0+1)
+   02C2 C0 D0              1317 	push	psw
+   02C4 75 D0 00           1318 	mov	psw,#0x00
+                    02C7   1319 	C$isrvectors.c$183$1$1 ==.
+                           1320 ;	isrvectors.c:183: if (isrFncAdc != NULL_FNC)
+   02C7 E5*12              1321 	mov	a,_isrFncAdc
+   02C9 45*13              1322 	orl	a,(_isrFncAdc + 1)
+   02CB 60 09              1323 	jz	00102$
+                    02CD   1324 	C$isrvectors.c$185$2$2 ==.
+                           1325 ;	isrvectors.c:185: isrFncAdc();
+   02CD 85*12 82           1326 	mov	dpl,_isrFncAdc
+   02D0 85*13 83           1327 	mov	dph,(_isrFncAdc + 1)
+   02D3 12s00r00           1328 	lcall	__sdcc_call_dptr
+   02D6                    1329 00102$:
+                    02D6   1330 	C$isrvectors.c$187$1$1 ==.
+                           1331 ;	isrvectors.c:187: ADCON &= ~0x10;
+   02D6 53 F3 EF           1332 	anl	_ADCON,#0xEF
+   02D9 D0 D0              1333 	pop	psw
+   02DB D0 01              1334 	pop	(0+1)
+   02DD D0 00              1335 	pop	(0+0)
+   02DF D0 07              1336 	pop	(0+7)
+   02E1 D0 06              1337 	pop	(0+6)
+   02E3 D0 05              1338 	pop	(0+5)
+   02E5 D0 04              1339 	pop	(0+4)
+   02E7 D0 03              1340 	pop	(0+3)
+   02E9 D0 02              1341 	pop	(0+2)
+   02EB D0 83              1342 	pop	dph
+   02ED D0 82              1343 	pop	dpl
+   02EF D0 F0              1344 	pop	b
+   02F1 D0 E0              1345 	pop	acc
+   02F3 D0*00              1346 	pop	bits
+                    02F5   1347 	C$isrvectors.c$188$1$1 ==.
+                    02F5   1348 	XG$IsrAdc$0$0 ==.
+   02F5 32                 1349 	reti
+                           1350 ;------------------------------------------------------------
+                           1351 ;Allocation info for local variables in function 'IsrCanTmr'
+                           1352 ;------------------------------------------------------------
+                           1353 ;------------------------------------------------------------
+                    02F6   1354 	G$IsrCanTmr$0$0 ==.
+                    02F6   1355 	C$isrvectors.c$195$1$1 ==.
+                           1356 ;	isrvectors.c:195: void IsrCanTmr(void) __interrupt (9)
+                           1357 ;	-----------------------------------------
+                           1358 ;	 function IsrCanTmr
+                           1359 ;	-----------------------------------------
+   02F6                    1360 _IsrCanTmr:
+   02F6 C0*00              1361 	push	bits
+   02F8 C0 E0              1362 	push	acc
+   02FA C0 F0              1363 	push	b
+   02FC C0 82              1364 	push	dpl
+   02FE C0 83              1365 	push	dph
+   0300 C0 02              1366 	push	(0+2)
+   0302 C0 03              1367 	push	(0+3)
+   0304 C0 04              1368 	push	(0+4)
+   0306 C0 05              1369 	push	(0+5)
+   0308 C0 06              1370 	push	(0+6)
+   030A C0 07              1371 	push	(0+7)
+   030C C0 00              1372 	push	(0+0)
+   030E C0 01              1373 	push	(0+1)
+   0310 C0 D0              1374 	push	psw
+   0312 75 D0 00           1375 	mov	psw,#0x00
+                    0315   1376 	C$isrvectors.c$197$1$1 ==.
+                           1377 ;	isrvectors.c:197: if (isrFncCanTmr != 0)
+   0315 E5*14              1378 	mov	a,_isrFncCanTmr
+   0317 45*15              1379 	orl	a,(_isrFncCanTmr + 1)
+   0319 60 09              1380 	jz	00102$
+                    031B   1381 	C$isrvectors.c$199$2$2 ==.
+                           1382 ;	isrvectors.c:199: isrFncCanTmr();
+   031B 85*14 82           1383 	mov	dpl,_isrFncCanTmr
+   031E 85*15 83           1384 	mov	dph,(_isrFncCanTmr + 1)
+   0321 12s00r00           1385 	lcall	__sdcc_call_dptr
+   0324                    1386 00102$:
+                    0324   1387 	C$isrvectors.c$201$1$1 ==.
+                           1388 ;	isrvectors.c:201: CANGIT &= ~20;
+   0324 53 9B EB           1389 	anl	_CANGIT,#0xEB
+   0327 D0 D0              1390 	pop	psw
+   0329 D0 01              1391 	pop	(0+1)
+   032B D0 00              1392 	pop	(0+0)
+   032D D0 07              1393 	pop	(0+7)
+   032F D0 06              1394 	pop	(0+6)
+   0331 D0 05              1395 	pop	(0+5)
+   0333 D0 04              1396 	pop	(0+4)
+   0335 D0 03              1397 	pop	(0+3)
+   0337 D0 02              1398 	pop	(0+2)
+   0339 D0 83              1399 	pop	dph
+   033B D0 82              1400 	pop	dpl
+   033D D0 F0              1401 	pop	b
+   033F D0 E0              1402 	pop	acc
+   0341 D0*00              1403 	pop	bits
+                    0343   1404 	C$isrvectors.c$202$1$1 ==.
+                    0343   1405 	XG$IsrCanTmr$0$0 ==.
+   0343 32                 1406 	reti
+                           1407 	.area CSEG    (CODE)
+                           1408 	.area CONST   (CODE)
+                           1409 	.area XINIT   (CODE)
+                           1410 	.area CABS    (ABS,CODE)

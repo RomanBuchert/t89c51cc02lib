@@ -1,0 +1,7 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$adc_8c.html#aa9639be51794b4af3aa64ece6fe4c995" title="Initialisiert den AD&#45;Wandler." alt="" coords="213,5,275,35"/>
+<area shape="rect" id="node5" href="$timer0_8c.html#aec0502e8990203658ddfa826ad4f6567" title="Setzt den Zeitwert des Timers in ms." alt="" coords="195,58,293,89"/>
+<area shape="rect" id="node7" href="$timer1_8c.html#a300da1c126a45c59a706b96fe0a3b4e5" title="Setzt den Zeitwert des Timers in ms." alt="" coords="195,111,293,142"/>
+<area shape="rect" id="node9" href="$timer2_8c.html#a3ed1637214f828052fd5309c4cdda840" title="Tmr2Init" alt="" coords="209,165,279,195"/>
+<area shape="rect" id="node11" href="$usart_8c.html#abb9d42ee2ef7d9d8b400aa603af5a99f" title="UsartSetBaudrate" alt="" coords="181,218,307,249"/>
+</map>

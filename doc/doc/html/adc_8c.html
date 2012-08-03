@@ -1,0 +1,256 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>t89c51cc02lib: adc.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Erzeugt von Doxygen 1.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&nbsp;der&nbsp;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a>  </div>
+  <div class="headertitle">
+<h1>adc.c-Dateireferenz</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Funktionen für den AD-Wandler.  
+<a href="#_details">Mehr ...</a></p>
+<code>#include &lt;<a class="el" href="adc_8h_source.html">adc.h</a>&gt;</code><br/>
+<div class="dynheader">
+Include-Abhängigkeitsdiagramm für adc.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="adc_8c__incl.png" border="0" usemap="#adc_8c" alt=""/></div>
+<map name="adc_8c" id="adc_8c">
+<area shape="rect" id="node3" href="adc_8h.html" title="Funktionen für den AD&#45;Wandler." alt="" coords="95,86,148,117"/><area shape="rect" id="node5" href="t89c51cc02_8h.html" title="t89c51cc02.h" alt="" coords="5,246,104,277"/><area shape="rect" id="node7" href="mytypes_8h.html" title="Deklaration mit eigenen Dateitypen." alt="" coords="145,246,228,277"/><area shape="rect" id="node9" href="sys_cfg_8h.html" title="sysCfg.h" alt="" coords="84,166,159,197"/></map>
+</div>
+
+<p><a href="adc_8c_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc_8c.html#aa9639be51794b4af3aa64ece6fe4c995">AdcInit</a> (<a class="el" href="adc_8h.html#a52d42d7e13547b634dd52dc75f526fd0">TAdcInput</a> eAdcInput)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Initialisiert den AD-Wandler.  <a href="#aa9639be51794b4af3aa64ece6fe4c995"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc_8c.html#a07a74e7efcb4348629d061d88da32055">AdcSetChannels</a> (<a class="el" href="adc_8h.html#a52d42d7e13547b634dd52dc75f526fd0">TAdcInput</a> eAdcInput)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Aktiviert einzelne oder mehrere AD-Kanäle.  <a href="#a07a74e7efcb4348629d061d88da32055"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc_8c.html#a17f8403ba8ea088f525b86a0071c0e38">AdcClearChannels</a> (<a class="el" href="adc_8h.html#a52d42d7e13547b634dd52dc75f526fd0">TAdcInput</a> eAdcInput)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Deaktiviert einzelne oder mehrere AD-Kanäle.  <a href="#a17f8403ba8ea088f525b86a0071c0e38"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="mytypes_8h.html#ac915988d8c60a3b943f936c25f9eca6e">__u16</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc_8c.html#aaa015466c0947960a4d4770b78f50cd8">Adc10BitConversion</a> (<a class="el" href="adc_8h.html#aeda5494244bad8def86fe2d2d90f46cb">TAdcChannel</a> eAdcChannel)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Startet eine 10Bit-Wandlung und wartet bis diese beendet ist.  <a href="#aaa015466c0947960a4d4770b78f50cd8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc_8c.html#a6ed5ef3b55d3effd8655fef900ad6436">AdcStart10BitConversion</a> (<a class="el" href="adc_8h.html#aeda5494244bad8def86fe2d2d90f46cb">TAdcChannel</a> eAdcChannel)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Startet eine 10Bit-Wandlung ohne zu warten.  <a href="#a6ed5ef3b55d3effd8655fef900ad6436"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="mytypes_8h.html#ab291f552d5fd4d65ac668d6b2b180919">__u8</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="adc_8c.html#a03547682b60e349cadc59bffcf23cd73">AdcConversionReady</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Prüft ob eine Wandlung aktiv ist.  <a href="#a03547682b60e349cadc59bffcf23cd73"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p>Funktionen für den AD-Wandler. </p>
+<dl class="author"><dt><b>Autor:</b></dt><dd>Roman Buchert (<a href="mailto:roman.buchert@googlemail.com">roman.buchert@googlemail.com</a>) </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="adc_8c_source.html">adc.c</a>.</p>
+<hr/><h2>Dokumentation der Funktionen</h2>
+<a class="anchor" id="aaa015466c0947960a4d4770b78f50cd8"></a><!-- doxytag: member="adc.c::Adc10BitConversion" ref="aaa015466c0947960a4d4770b78f50cd8" args="(TAdcChannel eAdcChannel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mytypes_8h.html#ac915988d8c60a3b943f936c25f9eca6e">__u16</a> Adc10BitConversion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="adc_8h.html#aeda5494244bad8def86fe2d2d90f46cb">TAdcChannel</a>&nbsp;</td>
+          <td class="paramname"> <em>eAdcChannel</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Startet eine 10Bit-Wandlung und wartet bis diese beendet ist. </p>
+<p>Die Wandlung wird gestartet und es wird gewartet bis diese beendet ist. Dazu werden die Flags ADSST und ADEOC im Register ADCON ausgewertet. Da eine 10-Bit-Wandlung durchgeführt wird, wird der Prozessor über das Flag PSIDLE in den Schlafmodus versetzt. </p>
+<dl class="note"><dt><b>Zu beachten:</b></dt><dd>Falls der ausgewählte Kanal nicht aktiviert ist, wird keine Wandlung gestartet. </dd></dl>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>eAdcChannel</em>&nbsp;</td><td>zu wandelnder Kanal </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="adc_8h.html#a61239496f8e50c2add701615b451a58b" title="Auflistung mit den ADC-Kanälen zur Auswahl der Wandlung.">EAdcChannel</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="adc_8c_source.html#l00076">76</a> der Datei <a class="el" href="adc_8c_source.html">adc.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a17f8403ba8ea088f525b86a0071c0e38"></a><!-- doxytag: member="adc.c::AdcClearChannels" ref="a17f8403ba8ea088f525b86a0071c0e38" args="(TAdcInput eAdcInput)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdcClearChannels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="adc_8h.html#a52d42d7e13547b634dd52dc75f526fd0">TAdcInput</a>&nbsp;</td>
+          <td class="paramname"> <em>eAdcInput</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Deaktiviert einzelne oder mehrere AD-Kanäle. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>eAdcInput</em>&nbsp;</td><td>Bitmaske der aktiven AD-Kanäle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="adc_8h.html#a239c6822eadf2ab922e3b788398e344e" title="Auflistung der ADC-Eingangpins zur Konfiguration des AD-Wandlers.">EAdcInput</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="adc_8c_source.html#l00060">60</a> der Datei <a class="el" href="adc_8c_source.html">adc.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a03547682b60e349cadc59bffcf23cd73"></a><!-- doxytag: member="adc.c::AdcConversionReady" ref="a03547682b60e349cadc59bffcf23cd73" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mytypes_8h.html#ab291f552d5fd4d65ac668d6b2b180919">__u8</a> AdcConversionReady </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Prüft ob eine Wandlung aktiv ist. </p>
+<p>Als Wandlungsende muss im Register ADCON ADSST low und ADEOC auf High sein </p>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>0: Wandlung beendet <br/>
+ 1: Wandlung läuft noch </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="adc_8c_source.html#l00137">137</a> der Datei <a class="el" href="adc_8c_source.html">adc.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa9639be51794b4af3aa64ece6fe4c995"></a><!-- doxytag: member="adc.c::AdcInit" ref="aa9639be51794b4af3aa64ece6fe4c995" args="(TAdcInput eAdcInput)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdcInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="adc_8h.html#a52d42d7e13547b634dd52dc75f526fd0">TAdcInput</a>&nbsp;</td>
+          <td class="paramname"> <em>eAdcInput</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Initialisiert den AD-Wandler. </p>
+<p>Bei der Initialisierung wird versucht die Wandlungsfrequenz mittels Prescaler auf die im Datenblatt angegebenen 700kHz einzustellen. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>eAdcInput</em>&nbsp;</td><td>Bitmaske der aktiven AD-Kanäle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="adc_8h.html#a239c6822eadf2ab922e3b788398e344e" title="Auflistung der ADC-Eingangpins zur Konfiguration des AD-Wandlers.">EAdcInput</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="adc_8c_source.html#l00025">25</a> der Datei <a class="el" href="adc_8c_source.html">adc.c</a>.</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, was diese Funktion aufruft:</div>
+<div class="dyncontent">
+<div class="center"><img src="adc_8c_aa9639be51794b4af3aa64ece6fe4c995_cgraph.png" border="0" usemap="#adc_8c_aa9639be51794b4af3aa64ece6fe4c995_cgraph" alt=""/></div>
+<map name="adc_8c_aa9639be51794b4af3aa64ece6fe4c995_cgraph" id="adc_8c_aa9639be51794b4af3aa64ece6fe4c995_cgraph">
+<area shape="rect" id="node3" href="sys_cfg_8h.html#a1e4471005ece92a6868d6c07abcc0e42" title="Gibt die eingestellte Quarzfrequenz zurück." alt="" coords="119,5,244,35"/><area shape="rect" id="node5" href="sys_cfg_8h.html#a491c509fe8ec303c94e7e13dd6bd684f" title="Gibt den X&#45;Modus zurück." alt="" coords="124,58,239,89"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a07a74e7efcb4348629d061d88da32055"></a><!-- doxytag: member="adc.c::AdcSetChannels" ref="a07a74e7efcb4348629d061d88da32055" args="(TAdcInput eAdcInput)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdcSetChannels </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="adc_8h.html#a52d42d7e13547b634dd52dc75f526fd0">TAdcInput</a>&nbsp;</td>
+          <td class="paramname"> <em>eAdcInput</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Aktiviert einzelne oder mehrere AD-Kanäle. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>eAdcInput</em>&nbsp;</td><td>Bitmaske der aktiven AD-Kanäle </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="adc_8h.html#a239c6822eadf2ab922e3b788398e344e" title="Auflistung der ADC-Eingangpins zur Konfiguration des AD-Wandlers.">EAdcInput</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="adc_8c_source.html#l00050">50</a> der Datei <a class="el" href="adc_8c_source.html">adc.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a6ed5ef3b55d3effd8655fef900ad6436"></a><!-- doxytag: member="adc.c::AdcStart10BitConversion" ref="a6ed5ef3b55d3effd8655fef900ad6436" args="(TAdcChannel eAdcChannel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AdcStart10BitConversion </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="adc_8h.html#aeda5494244bad8def86fe2d2d90f46cb">TAdcChannel</a>&nbsp;</td>
+          <td class="paramname"> <em>eAdcChannel</em></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Startet eine 10Bit-Wandlung ohne zu warten. </p>
+<p>Die Wandlung wird gestartet. Da eine 10-Bit-Wandlung durchgeführt wird, wird der Prozessor über das Flag PSIDLE in den Schlafmodus versetzt. </p>
+<dl class="note"><dt><b>Zu beachten:</b></dt><dd>Falls der ausgewählte Kanal nicht aktiviert ist, wird keine Wandlung gestartet. </dd></dl>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>eAdcChannel</em>&nbsp;</td><td>zu wandelnder Kanal </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="adc_8h.html#a61239496f8e50c2add701615b451a58b" title="Auflistung mit den ADC-Kanälen zur Auswahl der Wandlung.">EAdcChannel</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="adc_8c_source.html#l00114">114</a> der Datei <a class="el" href="adc_8c_source.html">adc.c</a>.</p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Erzeugt am Sun Feb 20 2011 14:49:27 für t89c51cc02lib von&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

@@ -1,0 +1,25 @@
+
+[Anjuta]
+Maximized=1
+Geometry=1268x949+0+24
+
+[Project Manager]
+Shortcut=C file:///home/rb/projects/t89c51cc02lib/clean clean %%%C file:///home/rb/projects/t89c51cc02lib/all all %%%C file:///home/rb/projects/t89c51cc02lib/compile compile 
+
+[File Loader]
+Files=file:///home/rb/projects/t89c51cc02lib/include/adc.h#129%%%file:///home/rb/projects/t89c51cc02lib/test/sdcc_test2.c#64%%%file:///home/rb/projects/t89c51cc02lib/src/adc.c#12%%%file:///home/rb/projects/t89c51cc02lib/doc/Doxyfile#666%%%file:///home/rb/projects/t89c51cc02lib/src/usart.c#12%%%file:///home/rb/projects/t89c51cc02lib/include/usart.h#15%%%file:///home/rb/projects/t89c51cc02lib/include/ledtable.h#57
+
+[Document Manager]
+bookmarks=<?xml version="1.0" encoding="UTF-8"?>\n<bookmarks/>\n
+
+[Execution]
+Run in terminal=2
+Working directories=file:///home/rb/projects/t89c51cc02lib
+
+[Build]
+Configuration list=1:Default:%%%1:Debug:%%%1:Profiling:Profiling%%%1:Optimized:Optimized
+Selected Configuration=Debug
+BuildArgs/Default=--enable-maintainer-mode
+BuildArgs/Debug=--enable-maintainer-mode 'CFLAGS=-g -O0' 'CXXFLAGS=-g -O0' 'JFLAGS=-g -O0' 'FFLAGS=-g -O0'
+BuildArgs/Profiling=--enable-maintainer-mode 'CFLAGS=-g -pg' 'CXXFLAGS=-g -pg' 'JFLAGS=-g -pg' 'FFLAGS=-g -pg'
+BuildArgs/Optimized=--enable-maintainer-mode 'CFLAGS=-O2' 'CXXFLAGS=-O2' 'JFLAGS=-O2' 'FFLAGS=-O2'

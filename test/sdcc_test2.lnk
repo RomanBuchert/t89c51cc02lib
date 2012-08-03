@@ -1,0 +1,17 @@
+-myuxi
+-Y
+-z
+-b HOME = 0x0000
+-b ISEG = 0x0000
+-b BSEG = 0x0000
+-k /usr/bin/../share/sdcc/lib/small
+-k /usr/share/sdcc/lib/small
+-l ../lib/t89c51cc02_small.lib
+-l mcs51
+-l libsdcc
+-l libint
+-l liblong
+-l libfloat
+sdcc_test2.rel
+
+-e

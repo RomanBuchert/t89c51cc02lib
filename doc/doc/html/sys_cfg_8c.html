@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<title>t89c51cc02lib: sysCfg.c-Dateireferenz</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<link href="doxygen.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+<!-- Erzeugt von Doxygen 1.7.1 -->
+<div class="navigation" id="top">
+  <div class="tabs">
+    <ul class="tablist">
+      <li><a href="main.html"><span>Hauptseite</span></a></li>
+      <li class="current"><a href="files.html"><span>Dateien</span></a></li>
+    </ul>
+  </div>
+  <div class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Auflistung&nbsp;der&nbsp;Dateien</span></a></li>
+      <li><a href="globals.html"><span>Datei-Elemente</span></a></li>
+    </ul>
+  </div>
+</div>
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funktionen</a> &#124;
+<a href="#var-members">Variablen</a>  </div>
+  <div class="headertitle">
+<h1>sysCfg.c-Dateireferenz</h1>  </div>
+</div>
+<div class="contents">
+
+<p>Hier werden die Hardwareeigenschaften des Systems definiert.  
+<a href="#_details">Mehr ...</a></p>
+<code>#include &lt;<a class="el" href="sys_cfg_8h_source.html">sysCfg.h</a>&gt;</code><br/>
+<div class="dynheader">
+Include-Abhängigkeitsdiagramm für sysCfg.c:</div>
+<div class="dyncontent">
+<div class="center"><img src="sys_cfg_8c__incl.png" border="0" usemap="#sys_cfg_8c" alt=""/></div>
+<map name="sys_cfg_8c" id="sys_cfg_8c">
+<area shape="rect" id="node3" href="sys_cfg_8h.html" title="sysCfg.h" alt="" coords="75,86,149,117"/><area shape="rect" id="node5" href="t89c51cc02_8h.html" title="t89c51cc02.h" alt="" coords="5,166,104,197"/><area shape="rect" id="node7" href="mytypes_8h.html" title="Deklaration mit eigenen Dateitypen." alt="" coords="128,166,211,197"/></map>
+</div>
+
+<p><a href="sys_cfg_8c_source.html">gehe zum Quellcode dieser Datei</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="func-members"></a>
+Funktionen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys_cfg_8c.html#aa20e5e8c1c3fe8e89bd0bc0ddf377da1">SysInit</a> (<a class="el" href="mytypes_8h.html#a13a2835755bfba96b1790ff492741141">__u32</a> u32LQuarzFreq, <a class="el" href="sys_cfg_8h.html#a95eaab3c015dee2510d2f4c1d2a9a041">TSysClockMode</a> eSysClockMode)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Erste Funktion die aufgerufen werden muss. Hier wird die Quarzfreqzenz und der X2-Modus angegeben. Der X2-Modus wird nur aktiviert, wenn die Frequenz innerhalb des zulässigen Bereiches ist.  <a href="#aa20e5e8c1c3fe8e89bd0bc0ddf377da1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="mytypes_8h.html#a13a2835755bfba96b1790ff492741141">__u32</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys_cfg_8c.html#a1e4471005ece92a6868d6c07abcc0e42">SysGetQuarzFreq</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gibt die eingestellte Quarzfrequenz zurück.  <a href="#a1e4471005ece92a6868d6c07abcc0e42"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="mytypes_8h.html#ab291f552d5fd4d65ac668d6b2b180919">__u8</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys_cfg_8c.html#a491c509fe8ec303c94e7e13dd6bd684f">SysGetX2Mode</a> (void)</td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Gibt den X-Modus zurück.  <a href="#a491c509fe8ec303c94e7e13dd6bd684f"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="var-members"></a>
+Variablen</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="mytypes_8h.html#a13a2835755bfba96b1790ff492741141">__u32</a>&nbsp;</td><td class="memItemRight" valign="bottom"><a class="el" href="sys_cfg_8c.html#af2d79f9d61e77989e48764a0a47c1ece">u32QuarzFreq</a></td></tr>
+<tr><td class="mdescLeft">&nbsp;</td><td class="mdescRight">Fileglobale Variable in der die Quarzfreqzenz gespeichert wird.  <a href="#af2d79f9d61e77989e48764a0a47c1ece"></a><br/></td></tr>
+</table>
+<hr/><a name="_details"></a><h2>Ausführliche Beschreibung</h2>
+<p>Hier werden die Hardwareeigenschaften des Systems definiert. </p>
+<dl class="author"><dt><b>Autor:</b></dt><dd>Roman Buchert (<a href="mailto:roman.buchert@googlemail.com">roman.buchert@googlemail.com</a>) </dd></dl>
+
+<p>Definiert in Datei <a class="el" href="sys_cfg_8c_source.html">sysCfg.c</a>.</p>
+<hr/><h2>Dokumentation der Funktionen</h2>
+<a class="anchor" id="a1e4471005ece92a6868d6c07abcc0e42"></a><!-- doxytag: member="sysCfg.c::SysGetQuarzFreq" ref="a1e4471005ece92a6868d6c07abcc0e42" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mytypes_8h.html#a13a2835755bfba96b1790ff492741141">__u32</a> SysGetQuarzFreq </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gibt die eingestellte Quarzfrequenz zurück. </p>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>Die Quarzfrequenz in Hertz </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="sys_cfg_8c_source.html#l00046">46</a> der Datei <a class="el" href="sys_cfg_8c_source.html">sysCfg.c</a>.</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="sys_cfg_8c_a1e4471005ece92a6868d6c07abcc0e42_icgraph.png" border="0" usemap="#sys_cfg_8c_a1e4471005ece92a6868d6c07abcc0e42_icgraph" alt=""/></div>
+<map name="sys_cfg_8c_a1e4471005ece92a6868d6c07abcc0e42_icgraph" id="sys_cfg_8c_a1e4471005ece92a6868d6c07abcc0e42_icgraph">
+<area shape="rect" id="node3" href="adc_8c.html#aa9639be51794b4af3aa64ece6fe4c995" title="Initialisiert den AD&#45;Wandler." alt="" coords="213,5,275,35"/><area shape="rect" id="node5" href="timer0_8c.html#aec0502e8990203658ddfa826ad4f6567" title="Setzt den Zeitwert des Timers in ms." alt="" coords="195,58,293,89"/><area shape="rect" id="node7" href="timer1_8c.html#a300da1c126a45c59a706b96fe0a3b4e5" title="Setzt den Zeitwert des Timers in ms." alt="" coords="195,111,293,142"/><area shape="rect" id="node9" href="timer2_8c.html#a3ed1637214f828052fd5309c4cdda840" title="Tmr2Init" alt="" coords="209,165,279,195"/><area shape="rect" id="node11" href="usart_8c.html#abb9d42ee2ef7d9d8b400aa603af5a99f" title="UsartSetBaudrate" alt="" coords="181,218,307,249"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a491c509fe8ec303c94e7e13dd6bd684f"></a><!-- doxytag: member="sysCfg.c::SysGetX2Mode" ref="a491c509fe8ec303c94e7e13dd6bd684f" args="(void)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mytypes_8h.html#ab291f552d5fd4d65ac668d6b2b180919">__u8</a> SysGetX2Mode </td>
+          <td>(</td>
+          <td class="paramtype">void&nbsp;</td>
+          <td class="paramname"></td>
+          <td>&nbsp;)&nbsp;</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Gibt den X-Modus zurück. </p>
+<dl class="return"><dt><b>Rückgabe:</b></dt><dd>Das eingestellte Bit0 im Register CKCON <br/>
+ 0: X2-Modus aus (12 Zyklen pro Takt) <br/>
+ 1: X2-Modus ein (6 Zyklen pro Takt) </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="sys_cfg_8c_source.html#l00058">58</a> der Datei <a class="el" href="sys_cfg_8c_source.html">sysCfg.c</a>.</p>
+
+<p><div class="dynheader">
+Hier ist ein Graph der zeigt, wo diese Funktion aufgerufen wird:</div>
+<div class="dyncontent">
+<div class="center"><img src="sys_cfg_8c_a491c509fe8ec303c94e7e13dd6bd684f_icgraph.png" border="0" usemap="#sys_cfg_8c_a491c509fe8ec303c94e7e13dd6bd684f_icgraph" alt=""/></div>
+<map name="sys_cfg_8c_a491c509fe8ec303c94e7e13dd6bd684f_icgraph" id="sys_cfg_8c_a491c509fe8ec303c94e7e13dd6bd684f_icgraph">
+<area shape="rect" id="node3" href="adc_8c.html#aa9639be51794b4af3aa64ece6fe4c995" title="Initialisiert den AD&#45;Wandler." alt="" coords="200,5,261,35"/><area shape="rect" id="node5" href="usart_8c.html#abb9d42ee2ef7d9d8b400aa603af5a99f" title="UsartSetBaudrate" alt="" coords="168,58,293,89"/></map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="aa20e5e8c1c3fe8e89bd0bc0ddf377da1"></a><!-- doxytag: member="sysCfg.c::SysInit" ref="aa20e5e8c1c3fe8e89bd0bc0ddf377da1" args="(__u32 u32LQuarzFreq, TSysClockMode eSysClockMode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SysInit </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="mytypes_8h.html#a13a2835755bfba96b1790ff492741141">__u32</a>&nbsp;</td>
+          <td class="paramname"> <em>u32LQuarzFreq</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="sys_cfg_8h.html#a95eaab3c015dee2510d2f4c1d2a9a041">TSysClockMode</a>&nbsp;</td>
+          <td class="paramname"> <em>eSysClockMode</em></td><td>&nbsp;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Erste Funktion die aufgerufen werden muss. Hier wird die Quarzfreqzenz und der X2-Modus angegeben. Der X2-Modus wird nur aktiviert, wenn die Frequenz innerhalb des zulässigen Bereiches ist. </p>
+<dl><dt><b>Parameter:</b></dt><dd>
+  <table border="0" cellspacing="2" cellpadding="0">
+    <tr><td valign="top"></td><td valign="top"><em>u32LQuarzFreq</em>&nbsp;</td><td>Frequenz des Quarzes in Hertz </td></tr>
+    <tr><td valign="top"></td><td valign="top"><em>eSysClockMode</em>&nbsp;</td><td>Gibt den X-Modus des Prozessors an </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="see"><dt><b>Siehe auch:</b></dt><dd><a class="el" href="sys_cfg_8h.html#a012233cc17e61d04f8e3381c4960628e" title="Enum mit den verschiedenen Taktmodis.">ESysClockMode</a> </dd></dl>
+
+<p>Definiert in Zeile <a class="el" href="sys_cfg_8c_source.html#l00027">27</a> der Datei <a class="el" href="sys_cfg_8c_source.html">sysCfg.c</a>.</p>
+
+</div>
+</div>
+<hr/><h2>Variablen-Dokumentation</h2>
+<a class="anchor" id="af2d79f9d61e77989e48764a0a47c1ece"></a><!-- doxytag: member="sysCfg.c::u32QuarzFreq" ref="af2d79f9d61e77989e48764a0a47c1ece" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="mytypes_8h.html#a13a2835755bfba96b1790ff492741141">__u32</a> <a class="el" href="sys_cfg_8c.html#af2d79f9d61e77989e48764a0a47c1ece">u32QuarzFreq</a></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Fileglobale Variable in der die Quarzfreqzenz gespeichert wird. </p>
+
+<p>Definiert in Zeile <a class="el" href="sys_cfg_8c_source.html#l00017">17</a> der Datei <a class="el" href="sys_cfg_8c_source.html">sysCfg.c</a>.</p>
+
+</div>
+</div>
+</div>
+<hr class="footer"/><address class="footer"><small>Erzeugt am Sun Feb 20 2011 14:49:27 für t89c51cc02lib von&nbsp;
+<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.1 </small></address>
+</body>
+</html>

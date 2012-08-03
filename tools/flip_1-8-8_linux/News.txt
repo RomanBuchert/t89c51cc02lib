@@ -1,0 +1,95 @@
+NEWS - FLIP - 1.8.8
+
+               
+ATMEL
+
+Please read the LICENSE file.
+
+
+DESCRIPTION
+-----------
+
+This ATMEL ISP software allows to program all our FLASH C51/C251 parts.
+It runs under Windows 98/Me/NT/2000/XP and Linux as well.
+
+Communicating with the target device may be done through RS232, CAN or USB link.
+
+This software is named FLIP, which stands for: FLexible In-system Programmer.
+
+
+DOWNLOAD
+--------
+
+This software program can be downloaded from the Atmel website: 
+http://www.atmel.com
+
+
+MAIN FEATURES
+-------------
+
+- Intel MCS-86 Hexadecimal Object, Code 88 file format supported for data file 
+  loading and saving.
+- Optional address offset for loading.
+- Buffer control:
+  data byte modification, address range fill-in, goto a specified address, 
+  data byte sequence search, checksum calculation.
+- Target device control:
+  Blank check, Program, Read, Verify, Erase, Special bytes edition capability.
+- Permanently displayed and updated information about the buffer options and the 
+  target device status.
+- Customizable flow for quick repeating programming.
+- Recordable commands for fast context reloading.
+- Parts serialization.
+- Command window allowing control through a command file (Tcl language).
+- Progress bar, tooltips and on-line help.
+
+KNOWN BUGS AND LIMITATIONS
+--------------------------
+
+For a T89C51RD2 device, the bootloader version must be 1.2.4 or higher.
+
+PROBLEMS
+--------
+
+If you find any problem, please report it to
+Atmel Microcontrollers hotline e-mail address:
+mcu@atmel.com
+
+CHANGES
+-------
+
+Version 1.8.8; May-16-2003
+==========================
+
+
+- New supported devices: AT89C51RD2, AT89C51ED2 and AT89C51ID2.
+
+- USB 2.0 supported through Jungo's WinDriver 5.2.2 version.
+
+- RM CANview interface connection problem fixed; the error message was:
+  "can't read deviceArray(bootloaderId)".
+
+- Vector CANpari interface node connect problem fixed.
+
+- Possible CUSTOM memory selection with the T89C51AC2 device if the bootloader
+  version >= 1.5
+
+- 1200 bps added to the RS232 baudrate selection list.
+
+
+
+- Known bugs and anomalies :
+  ------------------------
+* The bootloader version 1.1.1 loaded into the following devices :
+  T89C51RB2 & T89C51RC2
+  allows writing the BSB byte after the device has been set to 
+  security level 1.
+
+* The bootloader version 1.2.4 loaded into the T89C51RD2 device
+  forbids the blank check operation after the device has been set
+  to level 2. The blank check operation should be allowed, whatever
+  the security level is.
+
+* For the On-Line Help to work properly, FLIP must be
+  launched from the directory which houses the flip.exe
+  file.

@@ -1,0 +1,13 @@
+<map id="G" name="G">
+<area shape="rect" id="node3" href="$adc_8h.html" title="Funktionen für den AD&#45;Wandler." alt="" coords="5,86,59,117"/>
+<area shape="rect" id="node7" href="$timer0_8h.html" title="Funktionen um Timer0 zu steuern." alt="" coords="83,86,152,117"/>
+<area shape="rect" id="node11" href="$timer1_8h.html" title="Funktionen um Timer1 zu steuern." alt="" coords="176,86,245,117"/>
+<area shape="rect" id="node15" href="$timer2_8h.html" title="timer2.h" alt="" coords="269,86,339,117"/>
+<area shape="rect" id="node19" href="$usart_8h.html" title="usart.h" alt="" coords="363,86,424,117"/>
+<area shape="rect" id="node23" href="$sys_cfg_8c.html" title="Hier werden die Hardwareeigenschaften des Systems definiert." alt="" coords="448,86,523,117"/>
+<area shape="rect" id="node5" href="$adc_8c.html" title="Funktionen für den AD&#45;Wandler." alt="" coords="5,166,59,197"/>
+<area shape="rect" id="node9" href="$timer0_8c.html" title="Funktionen um Timer0 zu steuern." alt="" coords="83,166,152,197"/>
+<area shape="rect" id="node13" href="$timer1_8c.html" title="Funktionen um Timer1 zu steuern." alt="" coords="176,166,245,197"/>
+<area shape="rect" id="node17" href="$timer2_8c.html" title="Funktionen um Timer2 zu steuern. Dieser Timer wird als Baudratengenerator verwendet." alt="" coords="269,166,339,197"/>
+<area shape="rect" id="node21" href="$usart_8c.html" title="usart.c" alt="" coords="363,166,424,197"/>
+</map>
