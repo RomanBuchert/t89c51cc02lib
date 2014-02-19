@@ -1,6 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$usart_8h.html#af1d8d36fd0f212544e500510d16e54ff" title="SetGetcharFnc" alt="" coords="145,5,255,35"/>
-<area shape="rect" id="node5" href="$usart_8h.html#aa3e9d400b9264baa4c4fbf62ff5ab603" title="SetPutcharFnc" alt="" coords="147,58,253,89"/>
-<area shape="rect" id="node7" href="$usart_8h.html#a56507c88aadff3729c053d07d3de51ed" title="UsartGetcharBlocking" alt="" coords="125,111,275,142"/>
-<area shape="rect" id="node9" href="$usart_8h.html#a1e6f685dae32cfb4857cfecb1a4449f9" title="UsartPutcharBlocking" alt="" coords="127,165,273,195"/>
-</map>

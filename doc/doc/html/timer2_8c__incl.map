@@ -1,7 +1,0 @@
-<map id="G" name="G">
-<area shape="rect" id="node3" href="$timer2_8h.html" title="timer2.h" alt="" coords="31,86,100,117"/>
-<area shape="rect" id="node5" href="$sys_cfg_8h.html" title="sysCfg.h" alt="" coords="135,166,210,197"/>
-<area shape="rect" id="node7" href="$t89c51cc02_8h.html" title="t89c51cc02.h" alt="" coords="8,246,107,277"/>
-<area shape="rect" id="node11" href="$isrvectors_8h.html" title="Diese Datei beinhaltet die Interruptvectoren des (A)T89C51CC02." alt="" coords="20,166,111,197"/>
-<area shape="rect" id="node9" href="$mytypes_8h.html" title="Deklaration mit eigenen Dateitypen." alt="" coords="131,246,214,277"/>
-</map>
