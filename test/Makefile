@@ -6,7 +6,7 @@ OBJECTS = sdcc_test2.rel \
 all: clean sdcc_test2
 
 sdcc_test2: $(OBJECTS)
-	$(CC) $(MFLAGS) $(LDFLAGS) $(LIBS) $(OBJECTS)
+	$(CC) $(CFLAGS) $(LDFLAGS) $(LIBS) $(OBJECTS)
 	packihx $@.ihx > $@.hex
 	
 count:

@@ -16,8 +16,8 @@ LIBOBJECTS =  adc.rel \
 all: clean t89c51cc02lib
 
 t89c51cc02lib: $(LIBOBJECTS)
-	ar -Sq $(LIBNAME)_$(MODEL).lib $(LIBOBJECTS)	
-	asranlib $(LIBNAME)_$(MODEL).lib
+	sdar -rc $(LIBNAME)_$(MODEL).lib $(LIBOBJECTS)	
+	sdranlib $(LIBNAME)_$(MODEL).lib
 	mv $(LIBNAME)_$(MODEL).lib ../lib/
 
 count:

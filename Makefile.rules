@@ -1,11 +1,21 @@
 
 ## Created by Anjuta
+CODESIZE = 0x4000
+IRAMSIZE = 0x0100
+XRAMSIZE = 0x0100
+XRAMLOC = 0x0000
+CODELOC = 0x0000
+
 MODEL = small
+OPTIMIZE = speed
+
 CC = sdcc
-CFLAGS = --model-$(MODEL) --debug \
-		 --iram-size 0x0100 --xram-size 0x0100 --code-size 0x4000 \
-		 --xram-loc 0x0000 --code-loc 0x0000 \
-		 --opt-code-speed
+#DEBUG = --debug
+DEBUG = 
+CFLAGS = --model-$(MODEL)  $(DEBUG) \
+		 --iram-size $(IRAMSIZE) --xram-size $(XRAMSIZE) --code-size $(CODESIZE) \
+		 --xram-loc $(XRAMLOC) --code-loc $(CODELOC) \
+		 --opt-code-$(OPTIMIZE)
 ##		 
 
 INCFLAGS = -I../include/

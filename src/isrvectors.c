@@ -55,7 +55,7 @@ void IsrInit()
  * @brief Vector für Externen Interrupt 0.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrExt0(void) __interrupt (0)
+Interrupt (IsrExt0, 0)
 {
 	EX0 = 0;
 	if (isrFncExt0 != NULL_FNC)
@@ -71,7 +71,7 @@ void IsrExt0(void) __interrupt (0)
  * @brief Vector für Timer 0.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrTmr0(void) __interrupt (1)
+Interrupt (IsrTmr0,1)
 {
 	if (isrFncTmr0 != NULL_FNC)
 	{
@@ -85,7 +85,7 @@ void IsrTmr0(void) __interrupt (1)
  * @brief Vector für Externen Interrupt 1.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrExt1(void) __interrupt (2)
+Interrupt(IsrExt1, 2)
 {
 	EX1 = 0;
 	if (isrFncExt1 != NULL_FNC)
@@ -101,7 +101,7 @@ void IsrExt1(void) __interrupt (2)
  * @brief Vector für Timer 1.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrTmr1(void) __interrupt (3)
+Interrupt (IsrTmr1, 3)
 {
 	if (isrFncTmr1 != NULL_FNC)
 	{
@@ -115,7 +115,7 @@ void IsrTmr1(void) __interrupt (3)
  * @brief Vector für UART.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrUart(void) __interrupt (4)
+Interrupt (IsrUart, 4)
 {
 	if (isrFncUart != NULL_FNC)
 	{
@@ -131,7 +131,7 @@ void IsrUart(void) __interrupt (4)
  * @brief Vector für Timer 2.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrTmr2(void) __interrupt (5)
+Interrupt (IsrTmr2, 5)
 {
 	if (isrFncTmr2 != NULL_FNC)
 	{
@@ -146,7 +146,7 @@ void IsrTmr2(void) __interrupt (5)
  * @brief Vector für PCA-Modul.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrPca(void) __interrupt (6)
+Interrupt (IsrPca, 6)
 {
 	if (isrFncPca != NULL_FNC)
 	{
@@ -163,7 +163,7 @@ void IsrPca(void) __interrupt (6)
  * @brief Vector für CAN.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrCan(void) __interrupt (7)
+Interrupt (IsrCan, 7)
 {
 	if (isrFncCan != NULL_FNC)
 	{
@@ -178,7 +178,7 @@ void IsrCan(void) __interrupt (7)
  * @brief Vector für AD-Wandler.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrAdc(void) __interrupt (8)
+Interrupt (IsrAdc, 8)
 {
 	if (isrFncAdc != NULL_FNC)
 	{
@@ -192,7 +192,7 @@ void IsrAdc(void) __interrupt (8)
  * @brief Vector für CAN-Timer.
  * Die Interruptflags werden nach dem Aufruf gelöscht
  ******************************************************************************/
-void IsrCanTmr(void) __interrupt (9)
+Interrupt (IsrCanTmr, 9)
 {
 	if (isrFncCanTmr != 0)
 	{
