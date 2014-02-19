@@ -6,10 +6,10 @@
 #ifndef COMPILER_H_
 #define COMPILER_H_
 /******************************************************************************/
-/**************************************************************************//**
- * @brief Definitionen für den SDCC-Compiler
- ******************************************************************************/
 
+/******************************************************************************
+ * Definitionen für den SDCC-Compiler
+ ******************************************************************************/
 #ifdef __SDCC
 #define Reentrant(x)	x __reentrant
 #define Sfr(x, y)		__sfr __at (y) x
@@ -17,6 +17,10 @@
 #define Sbit(x, y, z)	__sbit __at (y+z) x
 #define Interrupt(x,y) 	void x(void) __interrupt(y)
 #define At(x)			__at (x)
+#define Naked			__naked
+#define Critical		__critical
+#define Asm				__asm
+#define Endasm			__endasm
 
 #define BIT				__bit
 #define DATA			__data
@@ -31,8 +35,8 @@
 #endif //__SDCC
 /******************************************************************************/
 
-/**************************************************************************//**
- * @brief Definitionen für den KEIL-C51x-Compiler
+/******************************************************************************
+ * Definitionen für den KEIL-C51x-Compiler
  ******************************************************************************/
 #ifdef KEIL
 #define Reentrant(x)	x reentrant
@@ -41,6 +45,10 @@
 #define Sbit(x,y,z)		sbit x = y ^ z
 #define Interrupt(x,y)	void x(void) interrupt y
 #define At(x)			_at_ x
+#define Naked
+#define Critical		#pragma disable
+#define Asm				#pragma asm
+#define Endasm			#pragma endasm
 
 #define BIT				bit
 #define DATA			data
@@ -55,14 +63,41 @@
 #endif //KEIL
 /******************************************************************************/
 
+/******************************************************************************
+ * Definitionen für den GCC-Compiler
+ ******************************************************************************/
+#ifdef __GNUC__
+#define Reentrant(x)	x __reentrant
+#define Interrupt(x,y) 	void x(void)
+#define At(x)			__at (x)
+#define Naked			__naked
+#define Critical		__critical
+#define Asm				__asm
+#define Endasm			__endasm
+
+#define BIT
+#define DATA
+#define IDATA
+#define PDATA
+#define XDATA
+#define CODE
+
+#define VAR(type, name, stored)	stored type name
+#define PTR(type, name, stored, point2) point2 type * stored name
+
+#endif //__GNUC__
+/******************************************************************************/
+
+/******************************************************************************
+ * Allgeimeine Definitionen, gültig für alle Compiler
+ ******************************************************************************/
 /**************************************************************************//**
- * @brief Allgeimeine Definitionen, gültig für alle Compiler
+ * @def BOOL
+ * @brief Datentyp BOOL compilerunabhängig definieren.
+ *
  ******************************************************************************/
 #define BOOL	BIT
 /******************************************************************************/
-
-
-
 #endif /* COMPILER_H_ */
 
 /* Ab hier nur Doku,  */
@@ -228,6 +263,38 @@
  *
  ******************************************************************************/
 #define PTR(type, name, stored, point2)
+/******************************************************************************/
+
+/**************************************************************************//**
+ * @def Naked
+ * @brief Lässt bei einem Funktionsaufruf den Prolog/Epilog weg
+ *
+ ******************************************************************************/
+#define Naked
+/******************************************************************************/
+
+/**************************************************************************//**
+ * @def Critical
+ * @brief Sperrt die Interrupts für kritische Abschnitte
+ *
+ ******************************************************************************/
+#define Critical
+/******************************************************************************/
+
+/**************************************************************************//**
+ * @def Asm
+ * @brief Zeigt den Beginn eines Abschnittes in Assembler an.
+ *
+ ******************************************************************************/
+#define Asm
+/******************************************************************************/
+
+/**************************************************************************//**
+ * @def Endasm
+ * @brief Zeigt das Ende eines Abschnittes in Assembler an.
+ *
+ ******************************************************************************/
+#define Endasm
 /******************************************************************************/
 
 /**************************************************************************//**

@@ -22,16 +22,6 @@ void main(void)
 	__u16 u16AdcSpg;
 	__u16 u16Loop;
 
-	VAR(__u32, var_sdcc, DATA);
-	VARK(__u32, var_keil, DATA);
-
-	PTR(__u32, ptr1_sdcc, DATA, XDATA);
-	VAR(__u32, * DATA ptr2_sdcc, XDATA);
-
-
-
-
-
 	/*
 	__u16 u16Baudrate[] = 
 	{

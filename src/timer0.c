@@ -15,9 +15,9 @@
  * Fileglobale Variabeln
  ******************************************************************************/
 /// Variable mit dem Reloadwert für Timer0
-__u32 __data u32Tmr0Reload;
+VAR(__u32, u32Tmr0Reload, DATA);
 /// Variable mit dem temporären Reloadwert für Timer 0
-__u32 __data u32Tmr0TmpReload;
+VAR(__u32, u32Tmr0TmpReload, DATA);
 /// Funktionszeiger für die Benutzer-ISR
 void (*Tmr0UsrIsrFnc) (void) = NULL_FNC;
 /******************************************************************************/

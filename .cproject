@@ -22,9 +22,18 @@
 						<toolChain id="cdt.managedbuild.toolchain.sdcc.exe.release.686485293" name="cdt.managedbuild.toolchain.sdcc.exe.release" superClass="cdt.managedbuild.toolchain.sdcc.exe.release">
 							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.target.sdcc.platform.exe.release.1074572840" name="Release Platform" osList="solaris,linux,hpux,aix,qnx,win32" superClass="cdt.managedbuild.target.sdcc.platform.exe.release"/>
 							<builder id="cdt.managedbuild.target.sdcc.builder.exe.release.1013954692" managedBuildOn="false" name="Sdcc Make.Release" superClass="cdt.managedbuild.target.sdcc.builder.exe.release"/>
-							<tool id="cdt.managedbuild.tool.sdcc.c.compiler.exe.release.1419504944" name="SDCC Compiler" superClass="cdt.managedbuild.tool.sdcc.c.compiler.exe.release"/>
-							<tool id="cdt.managedbuild.tool.sdcc.c.linker.exe.release.1313462831" name="SDCC Linker" superClass="cdt.managedbuild.tool.sdcc.c.linker.exe.release"/>
-							<tool id="cdt.managedbuild.tool.sdcc.assembler.exe.release.1545366364" name="SDCC Assembler" superClass="cdt.managedbuild.tool.sdcc.assembler.exe.release"/>
+							<tool id="cdt.managedbuild.tool.sdcc.c.compiler.exe.release.1419504944" name="SDCC Compiler" superClass="cdt.managedbuild.tool.sdcc.c.compiler.exe.release">
+								<inputType id="cdt.managedbuild.tool.sdcc.c.compiler.input.2077697637" superClass="cdt.managedbuild.tool.sdcc.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.sdcc.c.linker.exe.release.1313462831" name="SDCC Linker" superClass="cdt.managedbuild.tool.sdcc.c.linker.exe.release">
+								<inputType id="cdt.managedbuild.tool.sdcc.c.linker.input.474974162" superClass="cdt.managedbuild.tool.sdcc.c.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_RELS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="cdt.managedbuild.tool.sdcc.assembler.exe.release.1545366364" name="SDCC Assembler" superClass="cdt.managedbuild.tool.sdcc.assembler.exe.release">
+								<inputType id="cdt.managedbuild.tool.sdcc.assembler.input.577945502" superClass="cdt.managedbuild.tool.sdcc.assembler.input"/>
+							</tool>
 						</toolChain>
 					</folderInfo>
 				</configuration>
@@ -39,4 +48,6 @@
 		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
+	<storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
 </cproject>
