@@ -11,6 +11,7 @@ LIBOBJECTS =  adc.rel \
 			  timer1.rel \
 			  timer2.rel \
 			  usart.rel \
+			  eeprom.rel \
 
 				  
 all: clean t89c51cc02lib

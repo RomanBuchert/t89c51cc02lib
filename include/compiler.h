@@ -20,7 +20,7 @@
 #define Naked			__naked
 #define Critical		__critical
 #define Asm				__asm
-#define Endasm			__endasm
+#define Endasm			__endasm;
 
 #define BIT				__bit
 #define DATA			__data
@@ -73,7 +73,7 @@
 #define Naked			__naked
 #define Critical		__critical
 #define Asm				__asm
-#define Endasm			__endasm
+#define Endasm			__endasm;
 
 #define BIT
 #define DATA
