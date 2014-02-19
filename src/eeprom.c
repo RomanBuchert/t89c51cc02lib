@@ -68,7 +68,7 @@ void EepromWritePage(VAR(__u8, Page, DATA), VAR(__u8, Wert, DATA)) Critical
 	while (EepromCheckBusy());
 	for (Cntr = 0; Cntr < 0x80; Cntr++)
 	{
-		*((VAR(__u16, *, DATA))Adresse) = Wert;
+		*((VAR(__u16, *, XDATA))Adresse) = Wert;
 	}
 	EECON = 0x52;
 	EECON = 0xA2;
