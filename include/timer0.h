@@ -56,21 +56,21 @@ void Tmr0Init(TTmrMode Mode, TTmrTyp Typ);
  * @see Tmr0IsrFnc
  * @param u16Zeit Timerwert in ms
  ******************************************************************************/
-void Tmr0SetTime(__u16 u16Zeit) __critical;
+void Tmr0SetTime(__u16 u16Zeit) Critical;
 /******************************************************************************/
 
 /**************************************************************************//**
  * @brief Setzt den Wert des Timerregisters
  * @param u16Value 16-Bit Reloadwert des Timers
  ******************************************************************************/
-void Tmr0SetValue(__u16 u16Value) __critical;
+void Tmr0SetValue(__u16 u16Value) Critical;
 /******************************************************************************/
 
 /**************************************************************************//**
  * @brief Gibt den aktuellen Wert des Timerregisters zurück
  * @return Aktueller Wert des Timerregisters
  ******************************************************************************/
-__u16 Tmr0GetValue(void) __critical;
+__u16 Tmr0GetValue(void) Critical;
 /******************************************************************************/
 
 /**************************************************************************//**
@@ -80,7 +80,7 @@ __u16 Tmr0GetValue(void) __critical;
  * kann, wird hier die User-ISR gewrappt und erst nach der angegebenen Zeit
  * aufgerufen.
  ******************************************************************************/
-void Tmr0IsrFnc(void) __critical;
+void Tmr0IsrFnc(void) Critical;
 /******************************************************************************/
 
 /**************************************************************************//**

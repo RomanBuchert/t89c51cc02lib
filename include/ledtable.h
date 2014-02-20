@@ -16,7 +16,7 @@
 /**************************************************************************//**
  * @brief Tabelle um eine LED mittels PWM linear anzusteuern
  ******************************************************************************/
-static const __code __u8 u8LedValues[256]=
+static const VAR(__u8, u8LedValues[256], CODE)=
 {
       0,   1,   1,   1,   1,   1,   1,   1,
       1,   1,   1,   1,   1,   1,   1,   1,
