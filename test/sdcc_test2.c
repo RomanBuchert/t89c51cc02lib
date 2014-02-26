@@ -15,49 +15,59 @@
 #include <pca.h>
 #include <ledtable.h>
 #include <adc.h>
+#include <io.h>
+
+VAR(BIT, bTimeOut, ) = 0;
+
+void Tmr0MyIsr(void);
 
 void main(void)
 {
-	__u16 u16AdcWert;
-	__u16 u16AdcSpg;
-	__u16 u16Loop;
-
-	/*
-	__u16 u16Baudrate[] = 
-	{
-		50, 300, 1200, 2400, 4800,
-		9600, 19200, 38400, 57600,
-		0
-	};
-	*/
+	VAR(__u32, u32TimeCntr, XDATA) = 0;
+	VAR(__u8, Stunden, XDATA) = 0;
+	VAR(__u8, Minuten, XDATA) = 0;
+	VAR(__u8, Sekunden, XDATA) = 0;
 	//Systeminitialisierung
-	SysInit(20000000, X2_ON);
+	SysInit(10000000, X2_ON);
 
 	//Interruptvektorsystem initialisieren
 	IsrInit();
 
+	//Timer initialisieren
+	Tmr0Init(Tmr16Bit , TmrTimer);
+	isrFncTmr0 = Tmr0MyIsr;
+	Tmr0SetTime(1000);
+	Tmr0IsrEna();
+	Tmr0Run();
+	IsrGlobalEna();
+
 	//serielle Schnittstelle initialisieren
 	UsartInit();
-	UsartSetBaudrate(57600);
+	UsartSetBaudrate(9600);
 	UsartRecEna();
 	
-	//ADC-Initialisieren
-	AdcInit(ADC_IN0);
-	
-	//PCA-Timer initialisieren
-	PcaInit(FPCA_2);
-	PcaInitModul(Pca0, Pwm);
-	PcaInitModul(Pca1, Pwm);
 
 	printf_tiny("\r\nStarting Application-Loop\r\n");
+	IoWritePort(P1, IoReadPort(P1) & 0x0F);
 	while (1)
 	{
-		u16AdcWert = Adc10BitConversion(ADC_CH0);
-		u16AdcSpg = (__u16) ((3003L * (__u32)u16AdcWert) >> 10);
+		Sekunden = (__u8) u32TimeCntr % 60;
+		Minuten = (__u8) (u32TimeCntr / 60) % 60;
+ 		Stunden = (__u8) (u32TimeCntr / 3600) % 24;
+ 		printf_fast ("Uhrzeit: %02d:%02d:%02d\r",
+ 				Stunden, Minuten, Sekunden);
+ 		u32TimeCntr++;
+ 		IoWriteBit(P1, 4, (u32TimeCntr & 0x01));
+		while (!bTimeOut);
+		bTimeOut = 0;
 
-		PcaSetPwm(Pca0, u8LedValues[ADDH]);
-		PcaSetPwm(Pca1, ADDH);
-		printf_tiny("AD-Wert: %d = %dmV        \r",u16AdcWert, u16AdcSpg);
-		for (u16Loop = 10000; u16Loop; u16Loop--);
 	}
+}
+
+void Tmr0MyIsr(void)
+{
+	static __u8 Wert;
+	Wert++;
+	bTimeOut = 1;
+	IoWriteBit(P1, 5, (Wert & 0x01));
 }
