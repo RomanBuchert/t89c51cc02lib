@@ -38,7 +38,7 @@
 /******************************************************************************
  * Definitionen für den KEIL-C51x-Compiler
  ******************************************************************************/
-#ifdef KEIL
+#ifdef __KEIL__
 #define Reentrant(x)	x reentrant
 #define Sfr(x,y)		sfr x = y
 #define Sfr16(x,y)		sfr16 x = y
@@ -46,9 +46,9 @@
 #define Interrupt(x,y)	void x(void) interrupt y
 #define At(x)			_at_ x
 #define Naked
-#define Critical		#pragma disable
-#define Asm				#pragma asm
-#define Endasm			#pragma endasm
+#define Critical		//#pragma disable
+#define Asm				//#pragma asm
+#define Endasm			//#pragma endasm
 
 #define BIT				bit
 #define DATA			data

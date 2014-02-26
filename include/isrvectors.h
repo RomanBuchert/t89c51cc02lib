@@ -41,7 +41,7 @@ extern void (*isrFncCanTmr) (void);		///< Funktionszeiger ISR CAN Timer
 void IsrInit();
 /******************************************************************************/
 
-
+#ifndef __KEIL__
 /**************************************************************************//**
  * @brief Vector für Externen Interrupt 0.
  * Die Interruptflags werden nach dem Aufruf gelöscht
@@ -110,7 +110,7 @@ Interrupt(IsrAdc, 8);
  ******************************************************************************/
 Interrupt(IsrCanTmr, 9);
 /******************************************************************************/
-
+#endif //#ifndef __KEIL__
 /**************************************************************************//**
  * @fn void IsrGlobalEna(void)
  * @brief Globale Interruptfreigabe einschalten.
