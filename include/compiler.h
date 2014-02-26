@@ -145,7 +145,7 @@
 
 /**************************************************************************//**
  * @def Interrupt(x, y)
- * @brief Ermöglicht die compilerunabgängige Definiton von Interrupts
+ * @brief Ermöglicht die compilerunabgängige Definition von Interrupts
  * @a x Funktionsname des Interrupts. Das Macro erweitert dies zu void x(void).
  * @a y ist die Interruptnummer bzw. der Interruptvector.
  * @param x Funktionsname des Interrupts. Wird zu void x(void) erweitert.
@@ -175,7 +175,7 @@
 
 /**************************************************************************//**
  * @def DATA
- * @brief Compilerunabhängige Definiton des Speicherortes DATA
+ * @brief Compilerunabhängige Definition des Speicherortes DATA
  * Legt den Speicherort der Variable in den ersten 128 Byte des direkt
  * adressierbaren internen Speicherbereich des Prozessors.
  * Speicherortabhängige Variablen sollten nur mit dem Makro
@@ -187,7 +187,7 @@
 
 /**************************************************************************//**
  * @def IDATA
- * @brief Compilerunabhängige Definiton des Speicherortes IDATA
+ * @brief Compilerunabhängige Definition des Speicherortes IDATA
  * Legt den Speicherort der Variable in die 256 Byte des internen Speichers.
  * Der Zugriff erfolgt durch indirekte Adressierung.
  * @see DATA
@@ -197,7 +197,7 @@
 
 /**************************************************************************//**
  * @def PDATA
- * @brief Compilerunabhängige Definiton des Speicherortes PDATA
+ * @brief Compilerunabhängige Definition des Speicherortes PDATA
  * Legt den Speicherort der Variable in den externen Speicher. Der Zugriff
  * erfolgt durch indirekte adressierung über das DPTR-Register. Es kann lediglich
  * auf eine Page (256) Byte zugegriffen werden. (Compact Model)
@@ -208,7 +208,7 @@
 
 /**************************************************************************//**
  * @def XDATA
- * @brief Compilerunabhängige Definiton des Speicherortes XDATA
+ * @brief Compilerunabhängige Definition des Speicherortes XDATA
  * Legt den Speicherort der Variable in den externen Speicher. Der Zugriff
  * erfolgt durch indirekte adressierung über das DPTR-Register. Es kann auf den
  * gesamten externen Speicher zugegriffen werden (64k)
@@ -220,7 +220,7 @@
 
 /**************************************************************************//**
  * @def CODE
- * @brief Compilerunabhängige Definiton des Speicherortes CODE
+ * @brief Compilerunabhängige Definition des Speicherortes CODE
  * Legt den Speicherort der Variable in den Programmspeicher. Auf diese Varable
  * kann nur lesend zugegriffen werden.
  * @see DATA
